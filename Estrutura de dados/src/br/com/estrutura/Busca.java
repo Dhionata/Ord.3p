@@ -1,5 +1,11 @@
 package br.com.estrutura;
 
+import java.nio.file.Files;
+
+import java.nio.file.Path;
+
+import java.nio.file.Paths;
+
 
 public class Busca {
 
@@ -8,6 +14,33 @@ public class Busca {
 	public static long start = System.nanoTime(); // contador nano
 	
 	public static long start1 = System.currentTimeMillis(); // contador mili
+	
+	
+	public static String Ler() {
+		
+		
+		Path caminho = Paths.get("C:\\Users\\muril\\Desktop\\Diciona\\dici.txt");
+		
+		try {
+			
+			byte[] texto = Files.readAllBytes(caminho);
+			
+			String leitura = new String(texto);
+			
+			return leitura;
+			
+			
+		}catch(Exception erro) {
+			
+			
+			
+		}
+		return null;
+		
+}
+	
+	
+	
 	
 	
 	public static int buscaSequencial(){
