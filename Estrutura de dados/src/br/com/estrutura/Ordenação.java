@@ -6,7 +6,7 @@ public class Ordenação {
 
 	public static void main(String[] args) {
 		
-		//0.2 alpha kk
+		//0.3 alpha kk
 	
 		String [] palavras = {"goiaba","melancia","ovo","pinga","Dhionatã"};
 
