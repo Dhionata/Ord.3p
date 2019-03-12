@@ -5,6 +5,7 @@ import java.util.*;
 public class Ordenação {
 
 	public static void main(String[] args) {
+		
 		//0.2 alpha kk
 	
 		String [] palavras = {"goiaba","melancia","ovo","pinga","Dhionatã"};
