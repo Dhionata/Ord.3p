@@ -16,7 +16,9 @@ public class Busca {
 
 	public static String Ler() {
 
-		Path caminho = Paths.get("C:\\Users\\muril\\Desktop\\Diciona\\dici.txt");
+		//mudar para "caminho" conforme o caso kk (By: Dhio)
+		Path caminho2 = Paths.get("C:\\Users\\muril\\Desktop\\Diciona\\dici.txt");
+		Path caminho = Paths.get("D:\\Users\\xiyun\\Desktop\\Dicionário\\Portu.txt");
 
 		try {
 			byte[] texto = Files.readAllBytes(caminho);
