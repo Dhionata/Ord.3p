@@ -2,17 +2,7 @@ package br.com.estrutura;
 
 // beta 
 public class Ordenação {
-
-	public static void main(String[] args) {
 		
-		String[] blabla = {"eusoufoda","Dhionatã","oi","pessoaslegaissempreselascão","ouxit"};
-		QuickSort(blabla, 0, blabla.length);
-		
-		for(String pl: blabla) {
-			System.out.println(pl);
-		}
-		
-	}
 	// SelectionSort
 
 	public void SelectionSort(String[] dicionario) {
@@ -79,7 +69,7 @@ public class Ordenação {
 
 	// QuickSort
 
-	public static void QuickSort(String[] dicionario, int esquerdo, int direito) {
+	public void QuickSort(String[] dicionario, int esquerdo, int direito) {
 
 		if (esquerdo < direito) {
 			int j = separar(dicionario, esquerdo, direito);
@@ -93,7 +83,7 @@ public class Ordenação {
 		int i = esquerdo + 1;
 		int j = direito + 1;
 
-		String pivo = p[direito / 2];
+		String pivo = p[esquerdo];
 
 		while (i <= j) {
 			if (p[i].compareToIgnoreCase(pivo) <= 0) {
