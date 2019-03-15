@@ -3,7 +3,7 @@ package br.com.estrutura;
 import java.util.*;
 
 // beta 
-public class Ordenação extends Busca {
+public class Ordenação {
 
 	// SelectionSort
 
