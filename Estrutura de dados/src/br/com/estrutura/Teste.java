@@ -17,7 +17,7 @@ public class Teste {
 
 		System.out.println("Ordem de leitura: " + Busca.Ler());
 		
-		System.out.println("Tempo nanosegundos: "+ o1.total);
+		System.out.println("Tempo nanosegundos: ");
 		System.out.println();
 
 	}

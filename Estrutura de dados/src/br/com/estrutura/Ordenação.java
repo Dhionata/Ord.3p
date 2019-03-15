@@ -1,10 +1,18 @@
 package br.com.estrutura;
 
-import java.util.*;
-
 // beta 
 public class Ordenação {
 
+	public static void main(String[] args) {
+		
+		String[] blabla = {"eusoufoda","Dhionatã","oi","pessoaslegaissempreselascão","ouxit"};
+		QuickSort(blabla, 0, blabla.length);
+		
+		for(String pl: blabla) {
+			System.out.println(pl);
+		}
+		
+	}
 	// SelectionSort
 
 	public void SelectionSort(String[] dicionario) {
@@ -30,10 +38,6 @@ public class Ordenação {
 
 		String[] palavras = dicionario;
 
-		Arrays.sort(palavras);
-		for (String pl : palavras) {
-			System.out.println(pl);
-		}
 		for (int i = 0; i < palavras.length; i++) {
 			for (int j = 0; j < (palavras.length - 1); j++) {
 				if (palavras[j].compareToIgnoreCase(palavras[j + 1]) == -1) {
@@ -54,11 +58,6 @@ public class Ordenação {
 	public void InsertionSort(String[] dicionario) {
 
 		String[] palavras = dicionario;
-		Arrays.sort(palavras);
-
-		for (String pl : palavras) {
-			System.out.println(pl);
-		}
 
 		int i, j;
 		String aux;
@@ -80,19 +79,16 @@ public class Ordenação {
 
 	// QuickSort
 
-	public void QuickSort(String[] dicionario, int esquerdo, int direito) {
-
-		String[] palavras = dicionario;
-		Arrays.sort(palavras);
+	public static void QuickSort(String[] dicionario, int esquerdo, int direito) {
 
 		if (esquerdo < direito) {
-			int j = separar(palavras, esquerdo, direito);
-			QuickSort(palavras, esquerdo, j - 1);
-			QuickSort(palavras, j + 1, direito);
+			int j = separar(dicionario, esquerdo, direito);
+			QuickSort(dicionario, esquerdo, j - 1);
+			QuickSort(dicionario, j + 1, direito);
 		}
 	}
 
-	private int separar(String[] p, int esquerdo, int direito) {
+	private static int separar(String[] p, int esquerdo, int direito) {
 
 		int i = esquerdo + 1;
 		int j = direito + 1;
@@ -114,7 +110,7 @@ public class Ordenação {
 		return j;
 	}
 
-	private void trocar(String[] pav, int i, int j) {
+	private static void trocar(String[] pav, int i, int j) {
 		String aux = pav[i];
 		pav[i] = pav[j];
 		pav[j] = aux;
