@@ -4,8 +4,10 @@ import java.util.*;
 
 public class Ordenação extends Busca {
 
+	//BubbleSort
+	
 	public void BubbleSort(String[] dicionario) {
-		// 1.1 beta kk
+		// beta kk
 
 		String[] palavras = dicionario;
 
@@ -28,6 +30,8 @@ public class Ordenação extends Busca {
 		}
 	}
 
+	// InsertionSort
+	
 	public void InsertionSort(String[] dicionario) {
 
 		String[] palavras = dicionario;
@@ -55,11 +59,17 @@ public class Ordenação extends Busca {
 		}
 	}
 
-	public void QuickSort(String[] p, int esquerdo, int direito) {
+	// QuickSort
+	
+	public void QuickSort(String[] dicionario, int esquerdo, int direito) {
+		
+		String[] palavras = dicionario;
+		Arrays.sort(palavras);
+		
 		if (esquerdo < direito) {
-			int j = separar(p, esquerdo, direito);
-			QuickSort(p, esquerdo, j - 1);
-			QuickSort(p, j + 1, direito);
+			int j = separar(palavras, esquerdo, direito);
+			QuickSort(palavras, esquerdo, j - 1);
+			QuickSort(palavras, j + 1, direito);
 		}
 	}
 
