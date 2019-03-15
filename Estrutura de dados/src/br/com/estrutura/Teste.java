@@ -13,7 +13,7 @@ public class Teste {
 		System.out.println("Ordem Binaria: "+ b1.Binaria());
 		
 		
-		
+		//
 		System.out.println("Testando: "+b1.VetorCriar()); // teste
 		
 		System.out.println("Tempo nanosegundos: "+ b1.total);
