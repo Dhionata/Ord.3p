@@ -2,12 +2,31 @@ package br.com.estrutura;
 
 import java.util.*;
 
+// beta 
 public class Ordenação extends Busca {
 
-	//BubbleSort
-	
+	// SelectionSort
+
+	public void SelectionSort(String[] dicionario) {
+
+		String[] palavras = dicionario;
+
+		for (int i = 0; i < (palavras.length - 1); i++) {
+			int min = i;
+			for (int j = i + 1; j <= palavras.length; j++) {
+				if (palavras[j].compareToIgnoreCase(palavras[min]) <= 0) {
+					min = j;
+				}
+				String t = palavras[min];
+				palavras[min] = palavras[i];
+				palavras[i] = t;
+			}
+		}
+	}
+
+	// BubbleSort
+
 	public void BubbleSort(String[] dicionario) {
-		// beta kk
 
 		String[] palavras = dicionario;
 
@@ -31,7 +50,7 @@ public class Ordenação extends Busca {
 	}
 
 	// InsertionSort
-	
+
 	public void InsertionSort(String[] dicionario) {
 
 		String[] palavras = dicionario;
@@ -60,12 +79,12 @@ public class Ordenação extends Busca {
 	}
 
 	// QuickSort
-	
+
 	public void QuickSort(String[] dicionario, int esquerdo, int direito) {
-		
+
 		String[] palavras = dicionario;
 		Arrays.sort(palavras);
-		
+
 		if (esquerdo < direito) {
 			int j = separar(palavras, esquerdo, direito);
 			QuickSort(palavras, esquerdo, j - 1);
@@ -74,9 +93,11 @@ public class Ordenação extends Busca {
 	}
 
 	private int separar(String[] p, int esquerdo, int direito) {
+
 		int i = esquerdo + 1;
 		int j = direito + 1;
-		String pivo = p[esquerdo];
+
+		String pivo = p[direito / 2];
 
 		while (i <= j) {
 			if (p[i].compareToIgnoreCase(pivo) <= 0) {
@@ -93,10 +114,9 @@ public class Ordenação extends Busca {
 		return j;
 	}
 
-	private void trocar(String[] p, int i, int j) {
-		String aux = p[i];
-		p[i] = p[j];
-		p[j] = aux;
-
+	private void trocar(String[] pav, int i, int j) {
+		String aux = pav[i];
+		pav[i] = pav[j];
+		pav[j] = aux;
 	}
 }
