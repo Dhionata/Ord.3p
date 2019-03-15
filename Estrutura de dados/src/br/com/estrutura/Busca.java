@@ -78,7 +78,7 @@ public class Busca {
 
 	//Metodo para depois que a String entrar no vetor
 	
-	//Sequencial
+	//Sequencial \\
 	
 	public static int buscaSequencial(){
 		
