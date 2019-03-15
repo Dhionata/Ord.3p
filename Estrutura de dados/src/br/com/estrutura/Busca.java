@@ -1,5 +1,15 @@
 package br.com.estrutura;
 
+import java.io.BufferedReader;
+
+import java.io.IOException;
+
+import java.io.RandomAccessFile;
+
+import java.io.FileReader;
+
+import java.io.IOException;
+
 import java.nio.file.Files;
 
 import java.nio.file.Path;
@@ -9,45 +19,72 @@ import java.nio.file.Paths;
 
 public class Busca {
 
-	//Sequencial
 	
 	public static long start = System.nanoTime(); // contador nano
 	
 	public static long start1 = System.currentTimeMillis(); // contador mili
 	
+
+	//51541
 	
-	public static String Ler() {
+	public String [] VetorCriar() {
 		
-		
-		Path caminho = Paths.get("C:\\Users\\muril\\Desktop\\Diciona\\dici.txt");
+		String leitura = "C:\\Users\\muril\\Desktop\\Diciona\\dici.txt";
 		
 		try {
 			
-			byte[] texto = Files.readAllBytes(caminho);
-			
-			String leitura = new String(texto);
-			
-			return leitura;
-			
-			
-		}catch(Exception erro) {
-			
-			
-			
-		}
-		return null;
+		FileReader arquivo = new FileReader(leitura);
 		
+		BufferedReader leitorLinhas = new BufferedReader(arquivo);
+		
+		String linha = null;
+		
+		linha = leitorLinhas.readLine();
+		
+		int tamanhoVetor = Integer.parseInt(linha);  // erro de leitura está aqui, lendo linha vazia 
+		
+		String[] vetorTxt = new String [tamanhoVetor + 1];
+		
+		int i = 0;
+		
+			while(linha != null ) {
+
+				
+				vetorTxt[i] = linha;
+				
+				linha = leitorLinhas.readLine();
+				
+				i++;
+				
+			}	
+			
+		
+		arquivo.close();
+		
+		return vetorTxt;
+
+		
+	}catch (IOException erro) {
+		
+		System.out.println("Erro ao ler arquivo: " + erro.getMessage());
+		
+		
+	}
+		return null;
+	
+			
 }
+
+
+	//Metodo para depois que a String entrar no vetor
 	
-	
-	
-	
+	//Sequencial
 	
 	public static int buscaSequencial(){
 		
 		int vet[] = {5, 7, 8, 1, 4, 6, 11, 34};
 				
-		int tl = 7; // Tamanho vetori
+		int tl = 7; // Tamanho vetor
 		
 		int valor = 8; // Valor a encontrar
 		
