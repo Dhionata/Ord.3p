@@ -4,10 +4,10 @@ import java.util.*;
 
 public class Ordenação extends Busca {
 
-	public void BubbleSort() {
+	public void BubbleSort(String[] dicionario) {
 		// 1.1 beta kk
 
-		String[] palavras = { Busca.Ler() };
+		String[] palavras = dicionario;
 
 		Arrays.sort(palavras);
 		for (String pl : palavras) {
@@ -28,9 +28,9 @@ public class Ordenação extends Busca {
 		}
 	}
 
-	public void InsertionSort() {
+	public void InsertionSort(String[] dicionario) {
 
-		String[] palavras = { Busca.Ler() };
+		String[] palavras = dicionario;
 		Arrays.sort(palavras);
 
 		for (String pl : palavras) {
@@ -55,25 +55,24 @@ public class Ordenação extends Busca {
 		}
 	}
 
-	public void QuickSort(int[] p, int esquerdo, int direito) {
+	public void QuickSort(String[] p, int esquerdo, int direito) {
 		if (esquerdo < direito) {
 			int j = separar(p, esquerdo, direito);
 			QuickSort(p, esquerdo, j - 1);
 			QuickSort(p, j + 1, direito);
-
 		}
 	}
 
-	private int separar(int[] p, int esquerdo, int direito) {
+	private int separar(String[] p, int esquerdo, int direito) {
 		int i = esquerdo + 1;
 		int j = direito + 1;
-		int pivo = p[esquerdo];
+		String pivo = p[esquerdo];
 
 		while (i <= j) {
-			if (p[i] <= pivo) {
+			if (p[i].compareToIgnoreCase(pivo) <= 0) {
 				i++;
-			} else if (p[j] > pivo) {
-				j++;
+			} else if (p[j].compareToIgnoreCase(pivo) > 0) {
+				j--;
 			} else if (i <= j) {
 				trocar(p, i, j);
 				i++;
@@ -84,8 +83,8 @@ public class Ordenação extends Busca {
 		return j;
 	}
 
-	private void trocar(int[] p, int i, int j) {
-		int aux = p[i];
+	private void trocar(String[] p, int i, int j) {
+		String aux = p[i];
 		p[i] = p[j];
 		p[j] = aux;
 
