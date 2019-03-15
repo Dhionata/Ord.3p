@@ -19,7 +19,6 @@ public class Busca {
 		Path caminho = Paths.get("C:\\Users\\muril\\Desktop\\Diciona\\dici.txt");
 
 		try {
-
 			byte[] texto = Files.readAllBytes(caminho);
 
 			String leitura = new String(texto);
@@ -30,7 +29,6 @@ public class Busca {
 
 		}
 		return null;
-
 	}
 
 	public static int buscaSequencial() {
@@ -50,9 +48,7 @@ public class Busca {
 			i = -1;
 
 		return i;
-
 	}
-
 	// Binaria
 
 	public static boolean Binaria() {
@@ -92,5 +88,4 @@ public class Busca {
 
 	public static long finish1 = System.currentTimeMillis(); // contador mili
 	long total1 = finish1 - start1;
-
 }
