@@ -2,50 +2,43 @@ package br.com.estrutura;
 
 // beta 
 public class Ordenação {
-		
+
 	// SelectionSort
 
-	public void SelectionSort(String[] dicionario) {
+	public static void SelectionSort(String[] dicionario) {
 
-		String[] palavras = dicionario;
-
-		for (int i = 0; i < (palavras.length - 1); i++) {
+		for (int i = 0; i < (dicionario.length); i++) {
 			int min = i;
-			for (int j = i + 1; j <= palavras.length; j++) {
-				if (palavras[j].compareToIgnoreCase(palavras[min]) <= 0) {
+			for (int j = i + 1; j < dicionario.length; j++) {
+				if (dicionario[j].compareToIgnoreCase(dicionario[min]) < 0) {
 					min = j;
 				}
-				String t = palavras[min];
-				palavras[min] = palavras[i];
-				palavras[i] = t;
+				String aux = dicionario[i];
+				dicionario[i] = dicionario[min];
+				dicionario[min] = aux;
 			}
 		}
 	}
 
 	// BubbleSort
 
-	public void BubbleSort(String[] dicionario) {
+	public static void BubbleSort(String[] dicionario) {
 
-		String[] palavras = dicionario;
-
-		for (int i = 0; i < palavras.length; i++) {
-			for (int j = 0; j < (palavras.length - 1); j++) {
-				if (palavras[j].compareToIgnoreCase(palavras[j + 1]) == -1) {
+		for (int i = 0; i < dicionario.length; i++) {
+			for (int j = 0; j < (dicionario.length - 1); j++) {
+				if (dicionario[j].compareToIgnoreCase(dicionario[j + 1]) == -1) {
 					String aux;
-					aux = palavras[j];
-					palavras[j] = palavras[j + 1];
-					palavras[j + 1] = aux;
+					aux = dicionario[j];
+					dicionario[j] = dicionario[j + 1];
+					dicionario[j + 1] = aux;
 				}
 			}
-		}
-		for (String pl : palavras) {
-			System.out.println(pl);
 		}
 	}
 
 	// InsertionSort
 
-	public void InsertionSort(String[] dicionario) {
+	public static void InsertionSort(String[] dicionario) {
 
 		String[] palavras = dicionario;
 
@@ -62,14 +55,11 @@ public class Ordenação {
 			}
 			palavras[j + 1] = aux;
 		}
-		for (String pl : palavras) {
-			System.out.println(pl);
-		}
 	}
 
 	// QuickSort
 
-	public void QuickSort(String[] dicionario, int esquerdo, int direito) {
+	public static void QuickSort(String[] dicionario, int esquerdo, int direito) {
 
 		if (esquerdo < direito) {
 			int j = separar(dicionario, esquerdo, direito);
@@ -81,16 +71,18 @@ public class Ordenação {
 	private static int separar(String[] p, int esquerdo, int direito) {
 
 		int i = esquerdo + 1;
-		int j = direito + 1;
+		int j = direito;
 
 		String pivo = p[esquerdo];
 
 		while (i <= j) {
-			if (p[i].compareToIgnoreCase(pivo) <= 0) {
+			if (p[i].compareToIgnoreCase(pivo) <= 0)
 				i++;
-			} else if (p[j].compareToIgnoreCase(pivo) > 0) {
+
+			else if (p[j].compareToIgnoreCase(pivo) > 0)
 				j--;
-			} else if (i <= j) {
+
+			else if (i <= j) {
 				trocar(p, i, j);
 				i++;
 				j--;

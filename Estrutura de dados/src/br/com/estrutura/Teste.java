@@ -1,24 +1,33 @@
 package br.com.estrutura;
 
+import java.util.Arrays;
+
 public class Teste {
 
 	public static void main(String[] args) {
 
 		Busca b1 = new Busca();
-		Ordenação o1 = new Ordenação();
-
-		System.out.println("Ordem Sequencial: " + Busca.buscaSequencial());
-
-		System.out.println("Ordem Binaria: " + Busca.Binaria());
-
-		System.out.println("Tempo nanosegundos: " + b1.total);
-
-		System.out.println("Tempo milissegundos: " + b1.total1);
-
-		System.out.println("Ordem de leitura: " + Busca.Ler());
 		
-		System.out.println("Tempo nanosegundos: ");
-		System.out.println();
+		String[] blabla = {"eusoufoda","Dhionatã","oi","pessoaslegaissempreselascão","ouxit"};
+		
 
+		//System.out.println("Ordem Sequencial: " + Busca.buscaSequencial());
+
+		//System.out.println("Ordem Binaria: " + Busca.Binaria());
+
+		//System.out.println("Tempo nanosegundos: " + b1.total);
+
+		//System.out.println("Tempo milissegundos: " + b1.total1);
+
+		//System.out.println("Ordem de leitura: " + Busca.Ler());
+		
+		//System.out.println("Tempo nanosegundos: ");
+		
+		Ordenação.QuickSort(blabla, 0, blabla.length -1);
+		//Ordenação.BubbleSort(blabla);
+		//Ordenação.InsertionSort(blabla);
+		//Ordenação.SelectionSort(blabla);
+
+		System.out.println(Arrays.toString(blabla));
 	}
 }
