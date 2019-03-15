@@ -1,6 +1,6 @@
 package br.com.estrutura;
 
-// beta 
+// beta 1.4
 public class Ordenação {
 
 	// SelectionSort
