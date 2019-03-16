@@ -15,6 +15,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 
 import java.nio.file.Paths;
+import java.util.Arrays;
 
 //beta 1.4
 public class Busca {
@@ -25,7 +26,7 @@ public class Busca {
 
 	// 51541
 
-	public String[] VetorCriar() {
+	public String VetorCriar() {
 
 		String leitura = "./Linguagem/dic.txt";
 
@@ -39,7 +40,7 @@ public class Busca {
 
 			linha = leitorLinhas.readLine();
 
-			int tamanhoVetor = Integer.parseInt(linha); // erro de leitura está aqui, lendo linha vazia
+			int tamanhoVetor = Integer.parseInt(linha); 
 
 			String[] vetorTxt = new String[tamanhoVetor + 1];
 
@@ -55,9 +56,11 @@ public class Busca {
 
 			}
 
-			arquivo.close();
-
-			return vetorTxt;
+			arquivo.close(); 
+			
+			for (i = 0; i <= 2; i++) {
+				System.out.println(Arrays.toString(vetorTxt));
+			}
 
 		} catch (IOException erro) {
 
@@ -65,6 +68,8 @@ public class Busca {
 
 		}
 		return null;
+		
+
 
 	}
 	//
