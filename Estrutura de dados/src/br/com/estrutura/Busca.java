@@ -40,7 +40,7 @@ public class Busca {
 
 			linha = leitorLinhas.readLine();
 
-			int tamanhoVetor = Integer.parseInt(linha); 
+			int tamanhoVetor = Integer.parseInt(linha);
 
 			String[] vetorTxt = new String[tamanhoVetor + 1];
 
@@ -56,10 +56,10 @@ public class Busca {
 
 			}
 
-			arquivo.close(); 
+			arquivo.close();
 			
-			for (i = 0; i <= 2; i++) {
-				System.out.println(Arrays.toString(vetorTxt));
+			for(String pl: vetorTxt) {
+				System.out.println(pl);
 			}
 
 		} catch (IOException erro) {
@@ -68,8 +68,6 @@ public class Busca {
 
 		}
 		return null;
-		
-
 
 	}
 	//

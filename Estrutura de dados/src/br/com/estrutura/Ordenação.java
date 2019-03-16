@@ -10,7 +10,7 @@ public class Ordenação {
 		for (int i = 0; i < (dicionario.length); i++) {
 			int min = i;
 			for (int j = i + 1; j < dicionario.length; j++) {
-				if (dicionario[j].length() <  dicionario[min].length()) {
+				if (dicionario[j].length() < dicionario[min].length()) {
 					min = j;
 				}
 				String aux = dicionario[i];
