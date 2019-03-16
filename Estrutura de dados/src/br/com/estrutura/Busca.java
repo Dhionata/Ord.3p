@@ -29,7 +29,7 @@ public class Busca {
 	public static String[] VetorCriar(String cam) {
 
 		String caminho = cam;
-		String[] vetorTxt = null; 
+		String[] vetorTxt = null;
 		try {
 
 			FileReader arquivo = new FileReader(caminho);
@@ -42,7 +42,6 @@ public class Busca {
 
 			int tamanhoVetor = Integer.parseInt(linha);
 
-			
 			vetorTxt = new String[tamanhoVetor + 1];
 			int i = 0;
 
@@ -53,22 +52,13 @@ public class Busca {
 				linha = leitorLinhas.readLine();
 
 				i++;
-
 			}
-
 			arquivo.close();
 			
-			for(String pl: vetorTxt) {
-				System.out.println(pl);
-			}
-
 		} catch (IOException erro) {
-
 			System.out.println("Erro ao ler arquivo: " + erro.getMessage());
-
 		}
 		return vetorTxt;
-
 	}
 	//
 

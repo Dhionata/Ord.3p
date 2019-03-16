@@ -7,13 +7,9 @@ public class Teste {
 
 	public static void main(String[] args) {
 
-		
-		
+		String[] blabla = Busca.VetorCriar("./Linguagem/dic.txt");
 
-		String [] blabla = Busca.VetorCriar("./Linguagem/dic.txt");
-		
-		
-		Arrays.sort(blabla);//ordenando alfabeticamente.
+		// Arrays.sort(blabla);//ordenando alfabeticamente.
 
 		// System.out.println("Ordem Sequencial: " + Busca.buscaSequencial());
 
@@ -23,19 +19,21 @@ public class Teste {
 
 		// System.out.println("Tempo milissegundos: " + b1.total1);
 
-		//System.out.println("Teste: " + b1.VetorCriar());
+		// System.out.println("Teste: " + b1.VetorCriar());
 
 		// System.out.println("Ordem de leitura: " + Busca.Ler());
 
 		// System.out.println("Tempo nanosegundos: ");
 
 		Ordenação.QuickSort(blabla, 0, blabla.length - 1);
-		// Ordenação.BubbleSort(blabla);
-		// Ordenação.InsertionSort(blabla);
-		// Ordenação.SelectionSort(blabla);
+		//Ordenação.BubbleSort(blabla);
+		//Ordenação.InsertionSort(blabla);
+		//Ordenação.SelectionSort(blabla);
 
-		for(String pl: blabla) {
+		for (String pl : blabla) {
 			System.out.println(pl);
 		}
+		System.out.println(Busca.finish);
+		System.out.println(Busca.finish1);
 	}
 }
