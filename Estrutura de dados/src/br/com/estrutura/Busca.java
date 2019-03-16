@@ -26,13 +26,13 @@ public class Busca {
 
 	// 51541
 
-	public String VetorCriar() {
+	public static String VetorCriar(String cam) {
 
-		String leitura = "./Linguagem/dic.txt";
+		String caminho = cam;
 
 		try {
 
-			FileReader arquivo = new FileReader(leitura);
+			FileReader arquivo = new FileReader(caminho);
 
 			BufferedReader leitorLinhas = new BufferedReader(arquivo);
 
