@@ -27,7 +27,7 @@ public class Busca {
 
 	public String[] VetorCriar() {
 
-		String leitura = "C:\\Users\\muril\\Desktop\\Diciona\\dici.txt";
+		String leitura = "./Linguagem/dic.txt";
 
 		try {
 
@@ -35,7 +35,7 @@ public class Busca {
 
 			BufferedReader leitorLinhas = new BufferedReader(arquivo);
 
-			String linha = null;
+			String linha = "";
 
 			linha = leitorLinhas.readLine();
 

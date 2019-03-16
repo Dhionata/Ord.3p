@@ -18,15 +18,17 @@ public class Teste {
 		// System.out.println("Tempo nanosegundos: " + b1.total);
 
 		// System.out.println("Tempo milissegundos: " + b1.total1);
+		
+		System.out.println("Teste: "+ b1.VetorCriar());
 
 		// System.out.println("Ordem de leitura: " + Busca.Ler());
 
 		// System.out.println("Tempo nanosegundos: ");
 
-		Ordenação.QuickSort(blabla, 0, blabla.length - 1);
+		//Ordenação.QuickSort(blabla, 0, blabla.length - 1);
 		// Ordenação.BubbleSort(blabla);
 		// Ordenação.InsertionSort(blabla);
-		// Ordenação.SelectionSort(blabla);
+		 Ordenação.SelectionSort(blabla);
 
 		System.out.println(Arrays.toString(blabla));
 	}

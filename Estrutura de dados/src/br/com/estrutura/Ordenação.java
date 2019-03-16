@@ -10,7 +10,7 @@ public class Ordenação {
 		for (int i = 0; i < (dicionario.length); i++) {
 			int min = i;
 			for (int j = i + 1; j < dicionario.length; j++) {
-				if (dicionario[j].compareToIgnoreCase(dicionario[min]) < 0) {
+				if (dicionario[j].length() <  dicionario[min].length()) {
 					min = j;
 				}
 				String aux = dicionario[i];
@@ -26,7 +26,7 @@ public class Ordenação {
 
 		for (int i = 0; i < dicionario.length; i++) {
 			for (int j = 0; j < (dicionario.length - 1); j++) {
-				if (dicionario[j].compareToIgnoreCase(dicionario[j + 1]) == -1) {
+				if (dicionario[j].length() < dicionario[j + 1].length()) {
 					String aux;
 					aux = dicionario[j];
 					dicionario[j] = dicionario[j + 1];
@@ -49,7 +49,7 @@ public class Ordenação {
 			aux = palavras[i];
 			j = i - 1;
 
-			while ((j >= 0) && (aux.compareToIgnoreCase(palavras[j]) == -1)) {
+			while ((j >= 0) && (aux.length() < palavras[j].length())) {
 				palavras[j + 1] = palavras[j];
 				j--;
 			}
@@ -76,10 +76,10 @@ public class Ordenação {
 		String pivo = p[esquerdo];
 
 		while (i <= j) {
-			if (p[i].compareToIgnoreCase(pivo) <= 0)
+			if (p[i].length() <= pivo.length())
 				i++;
 
-			else if (p[j].compareToIgnoreCase(pivo) > 0)
+			else if (p[j].length() > pivo.length())
 				j--;
 
 			else if (i <= j) {
