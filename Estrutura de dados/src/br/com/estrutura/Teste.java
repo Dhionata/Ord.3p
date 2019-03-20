@@ -7,13 +7,11 @@ public class Teste {
 
 	public static void main(String[] args) {
 
-		String[] blabla = Busca.VetorCriar("./Linguagem/dic.txt");
+		String[] blabla = ArquivoHandler.VetorCriar("./Linguagem/dic.txt");
 
 		// Arrays.sort(blabla);//ordenando alfabeticamente.
 
-		// System.out.println("Ordem Sequencial: " + Busca.buscaSequencial());
-
-		// System.out.println("Ordem Binaria: " + Busca.Binaria());
+		
 
 		// System.out.println("Tempo nanosegundos: " + b1.total);
 
@@ -33,7 +31,16 @@ public class Teste {
 		for (String pl : blabla) {
 			System.out.println(pl);
 		}
-		System.out.println(Busca.finish);
-		System.out.println(Busca.finish1);
+		
+		System.out.println("Ordem Sequencial: " + BuscaSq.buscaSequencial());
+		
+		
+		System.out.println("Ordem Binaria: ");
+		BuscaBi.BuscaBinaria();
+		
+		
+		System.out.println("Contagem nano: " + BuscaSq.finish);
+		System.out.println("Contagem mili: "+ BuscaSq.finish1);
 	}
-}
+
+	}
