@@ -9,10 +9,9 @@ public class BuscaSq {
 
 	public static long start1 = System.currentTimeMillis(); // contador mili
 
+	// Sequencial
 
-	// Sequencial 
-	
-	//add leitura de String
+	// add leitura de String
 
 	public static int buscaSequencial() {
 

@@ -97,4 +97,10 @@ public class Ordenação {
 		pav[i] = pav[j];
 		pav[j] = aux;
 	}
+
+	// MergeSort 0.01
+
+	public static void MergeSort(String[] dicionario, String[] aux, int inicio, int tamanho) {
+
+	}
 }

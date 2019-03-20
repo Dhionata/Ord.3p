@@ -1,7 +1,5 @@
 package br.com.estrutura;
 
-import java.util.Arrays;
-
 //beta 1.4
 public class Teste {
 
@@ -9,9 +7,9 @@ public class Teste {
 
 		String[] blabla = ArquivoHandler.VetorCriar("./Linguagem/dic.txt");
 
-		// Arrays.sort(blabla);//ordenando alfabeticamente.
+		String[] w = new String[blabla.length];
 
-		
+		// Arrays.sort(blabla);//ordenando alfabeticamente.
 
 		// System.out.println("Tempo nanosegundos: " + b1.total);
 
@@ -23,24 +21,22 @@ public class Teste {
 
 		// System.out.println("Tempo nanosegundos: ");
 
-		Ordenação.QuickSort(blabla, 0, blabla.length - 1);
-		//Ordenação.BubbleSort(blabla);
-		//Ordenação.InsertionSort(blabla);
-		//Ordenação.SelectionSort(blabla);
+		// Ordenação.QuickSort(blabla, 0, blabla.length - 1);
+		Ordenação.MergeSort(blabla, w, 0, blabla.length);
+		// Ordenação.BubbleSort(blabla);
+		// Ordenação.InsertionSort(blabla);
+		// Ordenação.SelectionSort(blabla);
 
 		for (String pl : blabla) {
 			System.out.println(pl);
 		}
-		
-		System.out.println("Ordem Sequencial: " + BuscaSq.buscaSequencial());
-		
-		
-		System.out.println("Ordem Binaria: ");
-		BuscaBi.BuscaBinaria();
-		
-		
-		System.out.println("Contagem nano: " + BuscaSq.finish);
-		System.out.println("Contagem mili: "+ BuscaSq.finish1);
-	}
 
+		// System.out.println("Ordem Sequencial: " + BuscaSq.buscaSequencial());
+
+		// System.out.println("Ordem Binaria: ");
+		// BuscaBi.BuscaBinaria();
+
+		// System.out.println("Contagem nano: " + BuscaSq.finish);
+		// System.out.println("Contagem mili: " + BuscaSq.finish1);
 	}
+}
