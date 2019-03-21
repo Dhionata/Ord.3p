@@ -6,9 +6,9 @@ public class Teste {
 
 	public static void main(String[] args) {
 
-		String[] English = ArquivoHandler.VetorCriar("./Linguagem/English.txt");
-		String[] Portugues = ArquivoHandler.VetorCriar("./Linguagem/Portugues.txt");
-		String[] Latim = ArquivoHandler.VetorCriar("./Linguagem/Latim.txt");
+		String[] English = ArquivoHandler.VetorCriar("./Linguagens/English.txt");
+		String[] Portugues = ArquivoHandler.VetorCriar("./Linguagens/Portugues.txt"); //ARRUMAR FORMATAÇÃO.
+		String[] Latim = ArquivoHandler.VetorCriar("./Linguagens/Latim.txt"); //ARRUMAR FORMATAÇÃO.
 		String[] Escolheu = {};
 
 		Scanner entrada = new Scanner(System.in);
