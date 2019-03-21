@@ -10,6 +10,7 @@ public class ArquivoHandler {
 
 		String caminho = cam;
 		String[] vetorTxt = null;
+		
 		try {
 
 			FileReader arquivo = new FileReader(caminho);
@@ -23,6 +24,7 @@ public class ArquivoHandler {
 			int tamanhoVetor = Integer.parseInt(linha);
 
 			vetorTxt = new String[tamanhoVetor + 1];
+
 			int i = 0;
 
 			while (linha != null) {
