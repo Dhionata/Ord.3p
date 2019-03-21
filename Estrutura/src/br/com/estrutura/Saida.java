@@ -1,18 +1,21 @@
 package br.com.estrutura;
 
 import java.io.BufferedWriter;
+
 import java.io.File;
+
 import java.io.FileWriter;
+
 import java.io.IOException;
 
 public class Saida {
-
+ 
 	public class WriteToFileExample {
 		
 	    public void main(String[] args) {
 	        try {
 
-	            String content = "./Saída/saída.txt";
+	            String content = "./Output/sa�da.txt";
 
 	            File file = new File("./Linguagem/dic.txt");
 
