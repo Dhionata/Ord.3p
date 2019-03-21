@@ -22,7 +22,7 @@ public class Teste {
 		// System.out.println("Tempo nanosegundos: ");
 
 		// Ordenação.QuickSort(blabla, 0, blabla.length - 1);
-		Ordenação.MergeSort(blabla, w, 0, blabla.length);
+		Ordenação.MergeSort(blabla, w, 0, blabla.length - 1);
 		// Ordenação.BubbleSort(blabla);
 		// Ordenação.InsertionSort(blabla);
 		// Ordenação.SelectionSort(blabla);

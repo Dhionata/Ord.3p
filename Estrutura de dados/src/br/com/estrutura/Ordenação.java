@@ -98,9 +98,34 @@ public class Ordenação {
 		pav[j] = aux;
 	}
 
-	// MergeSort 0.01
+	// MergeSort
 
 	public static void MergeSort(String[] dicionario, String[] aux, int inicio, int tamanho) {
+		if (inicio < tamanho) {
+			int meio = (inicio + tamanho) / 2;
+			MergeSort(dicionario, aux, inicio, meio);
+			MergeSort(dicionario, aux, meio + 1, tamanho);
+			intercalar(dicionario, aux, inicio, meio, tamanho);
+		}
+	}
 
+	private static void intercalar(String[] dicionario, String[] aux, int inicio, int meio, int tamanho) {
+		for (int k = inicio; k <= tamanho; k++) {
+			aux[k] = dicionario[k];
+		}
+		int i = inicio;
+		int j = meio + 1;
+
+		for (int k = inicio; k <= tamanho; k++) {
+			if (i > meio) {
+				dicionario[k] = aux[j++];
+			} else if (j > tamanho) {
+				dicionario[k] = aux[i++];
+			} else if (aux[i].length() < aux[j].length()) {
+				dicionario[k] = aux[i++];
+			} else {
+				dicionario[k] = aux[j++];
+			}
+		}
 	}
 }
