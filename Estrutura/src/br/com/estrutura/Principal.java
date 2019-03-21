@@ -10,15 +10,20 @@ public class Principal {
 	public static void main(String[] args) {
 
 		String[] English = ArquivoHandler.VetorCriar("./Linguagens/English.txt");
+		
 		String[] Portugues = ArquivoHandler.VetorCriar("./Linguagens/Portugues.txt");  
+		
 		String[] Latim = ArquivoHandler.VetorCriar("./Linguagens/Latim.txt"); 
+		
 		String[] Escolheu = {};
 
 		Scanner entrada = new Scanner(System.in);
 		
 		int x;
 
-	
+		do {
+			
+		
 			System.out.println("\nEscolha o dicionario a ser utilizado: ");
 			System.out.println("\n1 - English");
 			System.out.println("\n2 - Portugues");
@@ -35,8 +40,10 @@ public class Principal {
 			} else {
 				System.out.println("\n\nCodigo Invalido, tente novamente.");
 			}
+		}while(x < 1 || x > 3);
 		
-
+	
+		
 		String[] w = new String[Escolheu.length];
 
 		// Arrays.sort(English);//ordenando alfabeticamente.

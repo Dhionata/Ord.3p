@@ -1,40 +1,81 @@
 package br.com.estrutura;
 
-import java.io.BufferedWriter;
+import java.io.FileInputStream;
 
-import java.io.File;
+import java.io.FileNotFoundException;
 
-import java.io.FileWriter;
+import java.io.PrintStream;
 
-import java.io.IOException;
+import java.util.Scanner;
+
+ 
 
 public class Saida {
+
  
-	public class WriteToFileExample {
-		
-	    public void main(String[] args) {
-	        try {
 
-	            String content = "./Output/saída.txt";
+ public static void metodoPorScan() {
 
-	            File file = new File("./Linguagem/dic.txt");
+         try {
 
-	            // if file doesn't exists, then create it
-	            if (!file.exists()) {
-	                file.createNewFile();
-	            }
+                 // leitor
 
-	            FileWriter fw = new FileWriter(file.getAbsoluteFile());
-	            BufferedWriter bw = new BufferedWriter(fw);
-	            bw.write(content);
-	            bw.close();
+                 Scanner sc = new Scanner(new FileInputStream("./Linguagens/English.txt"));
 
-	            System.out.println("Done");
+ 
 
-	        } catch (IOException e) {
-	            e.printStackTrace();
-	        }
-	    }
-	}
+                 // escritor
+
+                 PrintStream ps = new PrintStream("./Output/saída.txt");
+
+ 
+
+                 // percorre o arquivo
+
+                 while (sc.hasNextLine()) {
+
+                         String linha = sc.nextLine();
+
+ 
+
+                         // grava no destino
+
+                         ps.println(linha);
+
+                 }
+
+ 
+
+                 // fecha tudo
+
+                 ps.close();
+
+                 sc.close();
+
+ 
+
+         } catch (FileNotFoundException e) {
+
+                 e.printStackTrace();
+
+         }
+
+ }
+
+ 
+
+ public static void main(String[] args) {
+
+ 
+
+         // gravando
+
+         // metodoPorStream();
+
+         metodoPorScan();
+
+ }
+
+ 
 
 }
