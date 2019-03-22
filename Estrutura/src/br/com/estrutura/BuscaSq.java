@@ -4,17 +4,14 @@ public class BuscaSq {
 
 	// Sequencial
 
-	public static int buscaSequencial(String vet[], String valor, int tamanho) {
-
-		int i = 0;
-
-		while ((i < tamanho) && (vet[i] != valor)) {
-			i++;
+	public static String buscaSequencial(String vet[], String valor, int tamanho) {
+		
+		for(int i = 0; i <= vet.length - 1; i++) {
+			if(valor.equals(vet[i])) {
+				return "A palavra " + valor + " foi encontrada!"
+						+"Índice do vetor: "+ i;
+			}
 		}
-
-		if ((tamanho == 0) || (i >= tamanho)) {
-			i = -1;
-		}
-		return i;
+		return "Não foi encontrada a palavra " + valor + " no vetor.";
 	}
 }

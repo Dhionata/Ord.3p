@@ -10,61 +10,65 @@ import java.util.Scanner;
 
 public class Saida {
 
-	public static String[] metodoPorScan(String arquivo) {
+	public static void metodoPorScan(String[] arquivo) {
+		
+	
+		String[] arq = arquivo;
 
-		String arq = arquivo;
-		try {
-
-			// leitor
-
-			Scanner sc = new Scanner(new FileReader(arq));
-
-			// escritor
-
-			PrintStream ps = new PrintStream("./Output/saída.txt");
-
-			// percorre o arquivo
-
-			while (sc.hasNextLine()) {
-
-				String linha = sc.nextLine();
-
-				// Comprimento da String
-
-				int imprimir = linha.length();
-
-				int length = imprimir;
-
-				// grava no destino
-
-				ps.print(linha);
-				ps.println("----------------------------" + length);
-
-				System.out.println();
-
-			}
-
-			// fecha tudo
-
-			ps.close();
-
-			sc.close();
-
-		} catch (FileNotFoundException e) {
-
-			e.printStackTrace();
-
-		}
-		return null;
-	}
-
-	public static void main(String[] args) {
-
-		// gravando
-
-		// metodoPorStream();
-
-		metodoPorScan(null);
-
+//		Scanner sc = null;
+//		try {
+//
+//			// leitor
+//			for(int i = 0; i <= arq.length; i++) {
+//			sc = (new Scanner(new FileReader(arq[i])));
+//			}
+//			// escritor
+//
+//			PrintStream ps = new PrintStream("./Output/saída.txt");
+//
+//			// percorre o arquivo
+//
+//			while (sc.hasNextLine()) {
+//
+//				String linha = sc.nextLine();
+//
+//				// Comprimento da String
+//
+//				int imprimir = linha.length();
+//
+//				int length = imprimir;
+//
+//				// grava no destino
+//
+//				ps.print(linha);
+//				ps.println("----------------------------" + length);
+//
+//				System.out.println();
+//
+//			}
+//
+//			// fecha tudo
+//
+//			ps.close();
+//
+//			sc.close();
+//
+//		} catch (FileNotFoundException e) {
+//
+//			e.printStackTrace();
+//
+//		}
+//		return null;
+//	}
+//
+//	public static void main(String[] args) {
+//
+//		// gravando
+//
+//		// metodoPorStream();
+//
+//		metodoPorScan(null);
+//
+//	}
 	}
 }
