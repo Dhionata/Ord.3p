@@ -19,7 +19,7 @@ public class Principal {
 
 		// saída
 
-		String[] Arqui = Saida.metodoPorScan("./Linguagens/English.txt");
+		String[] Arqui = {};
 
 		Scanner entrada = new Scanner(System.in);
 
@@ -93,13 +93,13 @@ public class Principal {
 
 		Ordenacao.QuickSort(Escolheu, 0, Escolheu.length - 1);
 
-		Ordenacao.MergeSort(Escolheu, w, 0, Escolheu.length - 1);
+		// Ordenacao.MergeSort(Escolheu, w, 0, Escolheu.length - 1);
 
-		Ordenacao.BubbleSort(Escolheu);
+		// Ordenacao.BubbleSort(Escolheu);
 
-		Ordenacao.InsertionSort(Escolheu);
+		// Ordenacao.InsertionSort(Escolheu);
 
-		Ordenacao.SelectionSort(Escolheu);
+		// Ordenacao.SelectionSort(Escolheu);
 
 		// String [] Arqui = Saida.metodoPorScan("./Linguagens/English.txt");
 
@@ -107,11 +107,19 @@ public class Principal {
 			System.out.println(pl);
 		}
 
-		System.out.println("Ordem Binaria: " + BuscaBi.buscaBinariaRecursiva(1, 10, 2));
+		System.out.println("Informe a palavra a ser procurada: ");
+
+		String aserachada;
+
+		aserachada = entrada.nextLine();
+
+		System.out.println("Ordem Binaria: " + BuscaBi.buscaBinaria(aserachada, Escolheu));
 
 		System.out.println("Contagem nano: " + Principal.finish);
 
 		System.out.println("Contagem mili: " + Principal.finish1);
+
+		// Arqui = Saida.metodoPorScan(Escolheu); //(formatação de String[] em String)
 	}
 
 	public static long finish = System.nanoTime(); // contador nano

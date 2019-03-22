@@ -4,26 +4,34 @@ public class BuscaBi {
 
 	// Busca binaria
 
-	public static int buscaBinariaRecursiva(int menor, int maior, int chave) {
+	public static int buscaBinaria(String palavra, String[] dicionario) {
 
-		int[] array = { 1, 2, 4, 5, 7, 8, 10 };
+		String[] aserachado = dicionario;
 
-		int media = (maior + menor) / 2;
-
-		int valorMeio = array[media];
-
-		if (menor > maior)
-			return -1;
-
-		else if (valorMeio == chave)
-			return media;
-
-		else if (valorMeio < chave)
-			return buscaBinariaRecursiva(media + 1, maior, chave);
-
-		else
-			return buscaBinariaRecursiva(menor, media - 1, chave);
+		int i = binario(aserachado, palavra);
+		
+		return i;
 
 	}
 
+	private static int binario(String[] aserachado, String palavra) {
+		
+		int meio, inicio, fim;
+
+		inicio = 0;
+		
+		fim = aserachado.length - 1;
+
+		while (inicio <= fim) {
+			meio = (inicio + fim) / 2;
+			if (aserachado[meio].length() == palavra.length()) {
+				return meio;
+			} else if (aserachado[meio].length() < palavra.length()) {
+				inicio = meio + 1;
+			} else if (aserachado[meio].length() > palavra.length()) {
+				fim = meio - 1;
+			}
+		}
+		return -1;
+	}
 }

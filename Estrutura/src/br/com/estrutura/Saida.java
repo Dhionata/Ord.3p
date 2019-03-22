@@ -1,8 +1,8 @@
 package br.com.estrutura;
 
-import java.io.FileInputStream;
-
 import java.io.FileNotFoundException;
+
+import java.io.FileReader;
 
 import java.io.PrintStream;
 
@@ -10,15 +10,14 @@ import java.util.Scanner;
 
 public class Saida {
 
-	public static String[] metodoPorScan(String arquivo) {
+	public static String[] metodoPorScan(String escolheu) {
 
-		String arq = arquivo;
-
+		String arq = escolheu;
 		try {
 
 			// leitor
 
-			Scanner sc = new Scanner(new FileInputStream(arq));
+			Scanner sc = new Scanner(new FileReader(arq));
 
 			// escritor
 
