@@ -108,7 +108,8 @@ public class Principal {
 		Ordenacao.SelectionSort(Escolheu);
 		
 	
-
+		//String [] Arqui = Saida.metodoPorScan("./Linguagens/English.txt");
+		
 		for (String pl : Escolheu) {
 			System.out.println(pl);
 		}

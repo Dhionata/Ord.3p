@@ -17,9 +17,9 @@ public class Saida {
  public static String[] metodoPorScan(String arquivo) {
 
 	 	String arq = arquivo;
-	 	
-         try {
 
+         try {
+        	 		
                  // leitor
 
                  Scanner sc = new Scanner(new FileInputStream(arq));
