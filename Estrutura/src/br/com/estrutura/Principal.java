@@ -1,5 +1,6 @@
 package br.com.estrutura;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Principal {
@@ -7,7 +8,7 @@ public class Principal {
 	public static long start = System.nanoTime(); // contador nano
 	public static long start1 = System.currentTimeMillis(); // contador mili
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 
 		String[] English = ArquivoHandler.VetorCriar("./Linguagens/English.txt");
 
@@ -115,7 +116,7 @@ public class Principal {
 
 		// String [] Arqui = Saida.metodoPorScan("./Linguagens/English.txt");
 
-		//Arqui = Saida.metodoPorScan(Escolheu); // (formatação de String[] em String)
+		Arqui = Saida.metodoPorScan(Escolheu); // (formatação de String[] em String)
 
 		System.out.println("Contagem nano: " + Principal.finish);
 

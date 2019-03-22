@@ -12,9 +12,10 @@ import java.util.Scanner;
 
 public class Saida {
 
-	public static BufferedWriter metodoPorScan(String[] arquivo, String nomedoindereco) throws IOException {
+	public static String[] metodoPorScan(String[] arquivo) throws IOException {
 		
 	try {
+		String nomedoindereco = null;
 		String[] arq = arquivo;
 		BufferedWriter imprimir = new BufferedWriter(new FileWriter(nomedoindereco));
 		String linha = "";
@@ -24,9 +25,7 @@ public class Saida {
 			imprimir.append(linha);
 		}
 		
-		arquivo.close();
-		
-		} catch (FileNotFoundException e) {
+	} catch (FileNotFoundException e) {
 
 			e.printStackTrace();
 		}
