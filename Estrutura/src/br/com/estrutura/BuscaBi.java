@@ -9,17 +9,17 @@ public class BuscaBi {
 		String[] aserachado = dicionario;
 
 		int i = binario(aserachado, palavra);
-		
+
 		return i;
 
 	}
 
 	private static int binario(String[] aserachado, String palavra) {
-		
+
 		int meio, inicio, fim;
 
 		inicio = 0;
-		
+
 		fim = aserachado.length - 1;
 
 		while (inicio <= fim) {

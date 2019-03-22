@@ -49,6 +49,8 @@ public class Principal {
 
 		// Arrays.sort(English);//ordenando alfabeticamente.
 
+		Ordenacao.QuickSort(Escolheu, 0, Escolheu.length - 1);
+
 		if (Escolheu == English) {
 
 			String valor;
@@ -91,8 +93,6 @@ public class Principal {
 
 		}
 
-		Ordenacao.QuickSort(Escolheu, 0, Escolheu.length - 1);
-
 		// Ordenacao.MergeSort(Escolheu, w, 0, Escolheu.length - 1);
 
 		// Ordenacao.BubbleSort(Escolheu);
@@ -119,7 +119,7 @@ public class Principal {
 
 		System.out.println("Contagem mili: " + Principal.finish1);
 
-		// Arqui = Saida.metodoPorScan(Escolheu); //(formatação de String[] em String)
+		Arqui = Saida.metodoPorScan("./Linguagens/English.txt"); // (formatação de String[] em String)
 	}
 
 	public static long finish = System.nanoTime(); // contador nano

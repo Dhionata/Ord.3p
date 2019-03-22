@@ -10,9 +10,9 @@ import java.util.Scanner;
 
 public class Saida {
 
-	public static String[] metodoPorScan(String escolheu) {
+	public static String[] metodoPorScan(String arquivo) {
 
-		String arq = escolheu;
+		String arq = arquivo;
 		try {
 
 			// leitor
