@@ -1,20 +1,31 @@
 package br.com.estrutura;
 
+import java.io.BufferedWriter;
 import java.io.FileNotFoundException;
 
 import java.io.FileReader;
-
+import java.io.FileWriter;
+import java.io.IOException;
 import java.io.PrintStream;
 
 import java.util.Scanner;
 
 public class Saida {
 
-	public static void metodoPorScan(String[] arquivo) {
+	public static BufferedWriter metodoPorScan(String[] arquivo, String nomedoindereco) throws IOException {
 		
 	
 		String[] arq = arquivo;
-
+		BufferedWriter imprimir = new BufferedWriter(new FileWriter(nomedoindereco));
+		String linha = "";
+		
+		for(int i = 0; i<= arq.length; i++) {
+			linha = arq[i] + " ------TAMANHO----- " + arq[i].length() +"\n";
+			imprimir.append(linha);
+		}
+		
+		arq.close();
+		
 //		Scanner sc = null;
 //		try {
 //
