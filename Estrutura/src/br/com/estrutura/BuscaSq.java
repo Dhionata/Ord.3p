@@ -12,10 +12,9 @@ public class BuscaSq {
 			i++;
 		}
 
-		if ((tamanho == 0) || (i >= tamanho))
+		if ((tamanho == 0) || (i >= tamanho)) {
 			i = -1;
-
+		}
 		return i;
-
 	}
 }
