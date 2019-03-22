@@ -14,13 +14,15 @@ public class Saida {
 
  
 
- public static void metodoPorScan() {
+ public static String[] metodoPorScan(String arquivo) {
 
+	 	String arq = arquivo;
+	 	
          try {
 
                  // leitor
 
-                 Scanner sc = new Scanner(new FileInputStream("./Linguagens/English.txt"));
+                 Scanner sc = new Scanner(new FileInputStream(arq));
 
  
 
@@ -35,12 +37,22 @@ public class Saida {
                  while (sc.hasNextLine()) {
 
                          String linha = sc.nextLine();
+                         
+                         //Comprimento da String
+                         
+                         int imprimir = linha.length();
+                         
+                         int length = imprimir;
+                         
 
- 
 
                          // grava no destino
-
-                         ps.println(linha);
+                         
+                         ps.print(linha);
+                         ps.println("----------------------------"+length);
+                         
+                         
+                         System.out.println();
 
                  }
 
@@ -59,6 +71,7 @@ public class Saida {
                  e.printStackTrace();
 
          }
+		return null;
 
  }
 
@@ -72,7 +85,7 @@ public class Saida {
 
          // metodoPorStream();
 
-         metodoPorScan();
+         metodoPorScan(null);
 
  }
 

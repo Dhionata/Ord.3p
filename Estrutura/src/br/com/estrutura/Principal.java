@@ -9,6 +9,8 @@ public class Principal {
 
 	public static void main(String[] args) {
 
+		
+		
 		String[] English = ArquivoHandler.VetorCriar("./Linguagens/English.txt");
 		
 		String[] Portugues = ArquivoHandler.VetorCriar("./Linguagens/Portugues.txt");  
@@ -16,6 +18,10 @@ public class Principal {
 		String[] Latim = ArquivoHandler.VetorCriar("./Linguagens/Latim.txt"); 
 		
 		String[] Escolheu = {};
+		
+		//saída
+		
+		String [] Arqui = Saida.metodoPorScan("./Linguagens/English.txt");
 
 		Scanner entrada = new Scanner(System.in);
 		
