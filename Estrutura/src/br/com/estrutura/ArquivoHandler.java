@@ -5,8 +5,7 @@ import java.io.FileReader;
 import java.io.IOException;
 
 public class ArquivoHandler {
-	
-	
+
 	public static String[] VetorCriar(String cam) {
 
 		String caminho = cam;
@@ -35,7 +34,7 @@ public class ArquivoHandler {
 				i++;
 			}
 			arquivo.close();
-			
+
 		} catch (IOException erro) {
 			System.out.println("Erro ao ler arquivo: " + erro.getMessage());
 		}

@@ -8,87 +8,64 @@ import java.io.PrintStream;
 
 import java.util.Scanner;
 
- 
-
 public class Saida {
 
- 
+	public static String[] metodoPorScan(String arquivo) {
 
- public static String[] metodoPorScan(String arquivo) {
+		String arq = arquivo;
 
-	 	String arq = arquivo;
+		try {
 
-         try {
-        	 		
-                 // leitor
+			// leitor
 
-                 Scanner sc = new Scanner(new FileInputStream(arq));
+			Scanner sc = new Scanner(new FileInputStream(arq));
 
- 
+			// escritor
 
-                 // escritor
+			PrintStream ps = new PrintStream("./Output/saída.txt");
 
-                 PrintStream ps = new PrintStream("./Output/saída.txt");
+			// percorre o arquivo
 
- 
+			while (sc.hasNextLine()) {
 
-                 // percorre o arquivo
+				String linha = sc.nextLine();
 
-                 while (sc.hasNextLine()) {
+				// Comprimento da String
 
-                         String linha = sc.nextLine();
-                         
-                         //Comprimento da String
-                         
-                         int imprimir = linha.length();
-                         
-                         int length = imprimir;
-                         
+				int imprimir = linha.length();
 
+				int length = imprimir;
 
-                         // grava no destino
-                         
-                         ps.print(linha);
-                         ps.println("----------------------------"+length);
-                         
-                         
-                         System.out.println();
+				// grava no destino
 
-                 }
+				ps.print(linha);
+				ps.println("----------------------------" + length);
 
- 
+				System.out.println();
 
-                 // fecha tudo
+			}
 
-                 ps.close();
+			// fecha tudo
 
-                 sc.close();
+			ps.close();
 
- 
+			sc.close();
 
-         } catch (FileNotFoundException e) {
+		} catch (FileNotFoundException e) {
 
-                 e.printStackTrace();
+			e.printStackTrace();
 
-         }
+		}
 		return null;
+	}
 
- }
+	public static void main(String[] args) {
 
- 
+		// gravando
 
- public static void main(String[] args) {
+		// metodoPorStream();
 
- 
+		metodoPorScan(null);
 
-         // gravando
-
-         // metodoPorStream();
-
-         metodoPorScan(null);
-
- }
-
- 
-
+	}
 }
