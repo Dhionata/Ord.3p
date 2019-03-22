@@ -156,7 +156,7 @@ public class Principal {
 
 		// String [] Arqui = Saida.metodoPorScan("./Linguagens/English.txt");
 
-		Arqui = Saida.metodoPorScan(Escolheu); // (formatação de String[] em String)
+		//Arqui = Saida.metodoPorScan(Escolheu); // (formatação de String[] em String)
 
 		System.out.println("Contagem nano: " + Principal.finish);
 

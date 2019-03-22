@@ -24,7 +24,15 @@ public class Saida {
 			imprimir.append(linha);
 		}
 		
-		arq.close();
+		arquivo.close();
+		
+		} catch (FileNotFoundException e) {
+
+			e.printStackTrace();
+		}
+		
+		return null;
+		
 		
 //		Scanner sc = null;
 //		try {
