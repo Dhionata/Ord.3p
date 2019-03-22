@@ -113,47 +113,6 @@ public class Principal {
 		}
 		// Arrays.sort(English);//ordenando alfabeticamente.
 
-		/*
-		 * if (Escolheu == English) {
-		 * 
-		 * System.out.println("Escolha a palavra: ");
-		 * 
-		 * entrada.nextLine();
-		 * 
-		 * valor = entrada.nextLine();
-		 * 
-		 * System.out.println("Ordem Sequencial: " + BuscaSq.buscaSequencial(Escolheu,
-		 * valor, 48447));
-		 * 
-		 * }
-		 * 
-		 * else if (Escolheu == Portugues) {
-		 * 
-		 * System.out.println("Escolha a palavra: ");
-		 * 
-		 * entrada.nextLine();
-		 * 
-		 * valor = entrada.nextLine();
-		 * 
-		 * System.out.println("Ordem Sequencial: " + BuscaSq.buscaSequencial(Escolheu,
-		 * valor, 307374));
-		 * 
-		 * }
-		 * 
-		 * else if (Escolheu == Latim) {
-		 * 
-		 * System.out.println("Escolha a palavra: ");
-		 * 
-		 * entrada.nextLine();
-		 * 
-		 * valor = entrada.nextLine();
-		 * 
-		 * System.out.println("Ordem Sequencial: " + BuscaSq.buscaSequencial(Escolheu,
-		 * valor, 129290));
-		 * 
-		 * }
-		 */
-
 		// String [] Arqui = Saida.metodoPorScan("./Linguagens/English.txt");
 
 		//Arqui = Saida.metodoPorScan(Escolheu); // (formatação de String[] em String)
