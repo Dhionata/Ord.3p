@@ -11,9 +11,9 @@ public class Principal {
 
 		String[] English = ArquivoHandler.VetorCriar("./Linguagens/English.txt");
 
-		String[] Portugues = ArquivoHandler.VetorCriar("./Linguagens/Portugues.txt");
+		String[] Portugues = ArquivoHandler.VetorCriar("./Linguagens/English (Canadian).txt");
 
-		String[] Latim = ArquivoHandler.VetorCriar("./Linguagens/Latim.txt");
+		String[] Latim = ArquivoHandler.VetorCriar("./Linguagens/English (South African).txt");
 
 		String[] Escolheu = {};
 

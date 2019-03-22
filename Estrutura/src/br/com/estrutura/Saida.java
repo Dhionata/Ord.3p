@@ -14,7 +14,7 @@ public class Saida {
 
 	public static BufferedWriter metodoPorScan(String[] arquivo, String nomedoindereco) throws IOException {
 		
-	
+	try {
 		String[] arq = arquivo;
 		BufferedWriter imprimir = new BufferedWriter(new FileWriter(nomedoindereco));
 		String linha = "";
