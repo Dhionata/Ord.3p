@@ -6,15 +6,16 @@ import java.io.PrintStream;
 
 public class Saida {
 
-	public static String[] metodoPorScan(String[] arquivo) {
+	public static void metodoPorScan(String[] arquivo) {
 
 		try {
 			String[] arq = arquivo;
 			PrintStream ps = new PrintStream("./Output/saída.txt");
 			String linha = "";
+			ps.print("Palavra           ----TAMANHO\n");
 
-			for (int i = 0; i <= arq.length; i++) {
-				linha = arq[i] + " ------TAMANHO----- " + arq[i].length() + "\n";
+			for (int i = 0; i < arq.length; i++) {
+				linha = arq[i] + "     ----" + arq[i].length() + "\n";
 				ps.print(linha);
 			}
 
@@ -22,7 +23,5 @@ public class Saida {
 
 			e.printStackTrace();
 		}
-
-		return null;
 	}
 }

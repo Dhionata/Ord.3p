@@ -4,17 +4,17 @@ public class BuscaBi {
 
 	// Busca binaria
 
-	public static int buscaBinaria(String palavra, String[] dicionario) {
+	public static String buscaBinaria(String palavra, String[] dicionario) {
 
 		String[] aserachado = dicionario;
 
-		int i = binario(aserachado, palavra);
+		String i = binario(aserachado, palavra);
 
 		return i;
 
 	}
 
-	private static int binario(String[] aserachado, String palavra) {
+	private static String binario(String[] aserachado, String palavra) {
 
 		int meio, inicio, fim;
 
@@ -25,13 +25,22 @@ public class BuscaBi {
 		while (inicio <= fim) {
 			meio = (inicio + fim) / 2;
 			if (aserachado[meio].length() == palavra.length()) {
-				return meio;
+				for(int i = meio; i <= fim; i++) {
+					if(palavra.equalsIgnoreCase(aserachado[i])) {
+						return "Palavra '"+ palavra +"' na posição: "+ i;
+					}
+				}
+				for(int i = meio -1;i >= inicio ;i--) {
+					if(palavra.equalsIgnoreCase(aserachado[i])) {
+						return "Palavra '"+ palavra +"' na posição: "+ i ;
+					}
+				}
 			} else if (aserachado[meio].length() < palavra.length()) {
 				inicio = meio + 1;
 			} else if (aserachado[meio].length() > palavra.length()) {
 				fim = meio - 1;
 			}
 		}
-		return -1;
+		return "Palavra '"+ palavra +"' não encontrada !";
 	}
 }
