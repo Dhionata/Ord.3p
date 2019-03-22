@@ -2,7 +2,7 @@ package br.com.estrutura;
 
 public class Ordenacao {
 
-	// SelectionSort 
+	// SelectionSort
 
 	public static void SelectionSort(String[] dicionario) {
 

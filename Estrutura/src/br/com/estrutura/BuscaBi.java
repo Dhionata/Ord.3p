@@ -25,14 +25,14 @@ public class BuscaBi {
 		while (inicio <= fim) {
 			meio = (inicio + fim) / 2;
 			if (aserachado[meio].length() == palavra.length()) {
-				for(int i = meio; i <= fim; i++) {
-					if(palavra.equalsIgnoreCase(aserachado[i])) {
-						return "Palavra '"+ palavra +"' na posição: "+ i;
+				for (int i = meio; i <= fim; i++) {
+					if (palavra.equalsIgnoreCase(aserachado[i])) {
+						return "Palavra '" + palavra + "' na posição: " + i;
 					}
 				}
-				for(int i = meio -1;i >= inicio ;i--) {
-					if(palavra.equalsIgnoreCase(aserachado[i])) {
-						return "Palavra '"+ palavra +"' na posição: "+ i ;
+				for (int i = meio - 1; i >= inicio; i--) {
+					if (palavra.equalsIgnoreCase(aserachado[i])) {
+						return "Palavra '" + palavra + "' na posição: " + i;
 					}
 				}
 			} else if (aserachado[meio].length() < palavra.length()) {
@@ -41,6 +41,6 @@ public class BuscaBi {
 				fim = meio - 1;
 			}
 		}
-		return "Palavra '"+ palavra +"' não encontrada !";
+		return "Palavra '" + palavra + "' não encontrada !";
 	}
 }
