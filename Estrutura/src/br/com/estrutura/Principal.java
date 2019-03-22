@@ -68,14 +68,19 @@ public class Principal {
 				ordenacao = entrada.nextInt();
 
 				if (ordenacao == 1) {
+					System.out.println("Espere até a conclusão da ordenação!");
 					Ordenacao.QuickSort(Escolheu, 0, Escolheu.length - 1);
 				} else if (ordenacao == 2) {
+					System.out.println("Espere até a conclusão da ordenação!");
 					Ordenacao.MergeSort(Escolheu, w, 0, Escolheu.length - 1);
 				} else if (ordenacao == 3) {
+					System.out.println("Espere até a conclusão da ordenação!");
 					Ordenacao.BubbleSort(Escolheu);
 				} else if (ordenacao == 4) {
+					System.out.println("Espere até a conclusão da ordenação!");
 					Ordenacao.InsertionSort(Escolheu);
 				} else if (ordenacao == 5) {
+					System.out.println("Espere até a conclusão da ordenação!");
 					Ordenacao.SelectionSort(Escolheu);
 				} else {
 					System.out.println("\ncódigo inválido, tente novamente.");
