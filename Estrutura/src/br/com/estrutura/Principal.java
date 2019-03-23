@@ -1,14 +1,13 @@
 package br.com.estrutura;
 
-import java.io.IOException;
 import java.util.Scanner;
 
 public class Principal {
 
-	public static double start = System.nanoTime(); // contador nano
-	public static double start1 = System.currentTimeMillis(); // contador mili
+	public static long start = System.nanoTime(); // contador nano
+	public static long start1 = System.currentTimeMillis(); // contador mili
 
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args) {
 
 		String[] English = ArquivoHandler.VetorCriar("./Linguagens/English.txt");
 
@@ -28,6 +27,7 @@ public class Principal {
 		int cod;
 
 		do {
+			System.out.println("-- Código feito por Dhionatã Carlos Vieira e Murillo Maciel --");
 			System.out.println("\nEscolha o dicionario a ser utilizado: ");
 			System.out.println("\n1 - English");
 			System.out.println("\n2 - English (Canadian)");
@@ -87,6 +87,9 @@ public class Principal {
 				}
 			} while (ordenacao > 5 || ordenacao < 1);
 
+			long finish = System.nanoTime(); // contador nano
+			long finish1 = System.currentTimeMillis(); // contador mili
+
 			for (String pl : Escolheu) {
 				System.out.println(pl);
 			}
@@ -126,9 +129,12 @@ public class Principal {
 				}
 			} while (cod != 1 && cod != 2);
 
-			System.out.println("\nContagem nano: " + Principal.total);
+			long total = finish - start;
+			long total1 = finish1 - start1;
 
-			System.out.println("Contagem mili: " + Principal.total1);
+			System.out.println("\nContagem nano: " + total);
+
+			System.out.println("Contagem mili: " + total1);
 
 			System.out.println("\nDeseja escolher outro dicionário?\n1 - Sim\n2 - Não");
 			cod = entrada.nextInt();
@@ -137,10 +143,4 @@ public class Principal {
 
 		System.out.println("Obrigado por utilizar o programada ;D");
 	}
-
-	public static double finish = System.nanoTime(); // contador nano
-	static double total = finish - start;
-
-	public static double finish1 = System.currentTimeMillis(); // contador mili
-	static double total1 = finish1 - start1;
 }
