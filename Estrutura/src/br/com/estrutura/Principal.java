@@ -97,8 +97,13 @@ public class Principal {
 				System.out.println(pl);
 			}
 
-			System.out.println("Deseja procurar uma palavra?\n1 - Sim \n2 - Não");
-			cod = extracted().nextInt();
+			do {
+				System.out.println("\nDeseja procurar uma palavra?\n1 - Sim \n2 - Não");
+				cod = extracted().nextInt();
+				if (cod < 1 || cod > 2) {
+					System.out.println("Código inválido!");
+				}
+			} while (cod < 1 || cod > 2);
 
 			while (cod == 1) {
 				do {
@@ -118,15 +123,15 @@ public class Principal {
 						}
 					} while (cod != 2 && cod != 1);
 					do {
-						System.out.println("Deseja procurar outra palavra? \n1 - Sim\n2 - Não");
+						System.out.println("\nDeseja procurar outra palavra? \n1 - Sim\n2 - Não");
 						cod = extracted().nextInt();
 						if (cod < 1 || cod > 2) {
-							System.out.println("Código inválido!");
+							System.out.println("\nCódigo inválido!");
 						}
 					} while (cod < 1 || cod > 2);
 				} while (cod == 1);
 			};
-			
+
 			do {
 				System.out.println("\nDeseja salvar no arquivo saida.txt\n1 - Sim\n2 - Não");
 				cod = extracted().nextInt();
@@ -144,7 +149,7 @@ public class Principal {
 
 			System.out.println("Contagem em Milisegundos: " + total2);
 
-			System.out.println("Contagem em Segundos: " + total2 / 1000);
+			System.out.println("Contagem em Segundos: " + total / 1000000000);
 
 			System.out.println("\nDeseja escolher outro dicionário?\n1 - Sim\n2 - Não");
 			cod = extracted().nextInt();
