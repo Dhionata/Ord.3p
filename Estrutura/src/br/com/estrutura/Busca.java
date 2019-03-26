@@ -2,7 +2,7 @@ package br.com.estrutura;
 
 public class Busca {
 
-	// Busca binaria
+	// Binária
 
 	public static String buscaBinaria(String palavra, String[] dicionario) {
 
@@ -43,9 +43,7 @@ public class Busca {
 		}
 		return "Palavra '" + palavra + "' não encontrada !";
 	}
-	
-	
-	
+
 	// Sequencial
 
 	public static String buscaSequencial(String vet[], String valor) {

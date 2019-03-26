@@ -6,21 +6,22 @@ public class Principal {
 
 	public static void main(String[] args) {
 
-		String[] English = ArquivoHandler.VetorCriar("./Linguagens/English.txt");
-
-		String[] English_Canadian = ArquivoHandler.VetorCriar("./Linguagens/English (Canadian).txt");
-
-		String[] English_South_African = ArquivoHandler.VetorCriar("./Linguagens/English (South African).txt");
-
-		String[] Escolheu = {};
-
 		int x;
 		String procura;
 		int ordenacao;
 		int cod;
-		long total, total2;
+		double finish, finish2, start, start2;
 
 		do {
+
+			String[] English = ArquivoHandler.VetorCriar("./Linguagens/English.txt");
+
+			String[] English_Canadian = ArquivoHandler.VetorCriar("./Linguagens/English (Canadian).txt");
+
+			String[] English_South_African = ArquivoHandler.VetorCriar("./Linguagens/English (South African).txt");
+
+			String[] Escolheu = {};
+
 			System.out.println("-- Código feito por Dhionatã Carlos Vieira e Murillo Maciel --");
 			System.out.println("\nEscolha o dicionario a ser utilizado: ");
 			System.out.println("\n1 - English");
@@ -63,8 +64,8 @@ public class Principal {
 
 				ordenacao = extracted().nextInt();
 
-				long start = System.nanoTime(); // contador nano inicio
-				long start1 = System.currentTimeMillis(); // contador mili inicio
+				start = System.nanoTime(); // contador nano inicio
+				start2 = System.currentTimeMillis(); // contador mili inicio
 
 				if (ordenacao == 1) {
 					System.out.println("Espere até a conclusão da ordenação!");
@@ -85,11 +86,8 @@ public class Principal {
 					System.out.println("\ncódigo inválido, tente novamente.");
 				}
 
-				long finish = System.nanoTime(); // contador nano fim
-				long finish1 = System.currentTimeMillis(); // contador mili fim
-
-				total = finish - start;
-				total2 = finish1 - start1;
+				finish = System.nanoTime(); // contador nano fim
+				finish2 = System.currentTimeMillis(); // contador mili fim
 
 			} while (ordenacao > 5 || ordenacao < 1);
 
@@ -130,7 +128,8 @@ public class Principal {
 						}
 					} while (cod < 1 || cod > 2);
 				} while (cod == 1);
-			};
+			}
+			;
 
 			do {
 				System.out.println("\nDeseja salvar no arquivo saida.txt\n1 - Sim\n2 - Não");
@@ -145,18 +144,22 @@ public class Principal {
 				}
 			} while (cod != 1 && cod != 2);
 
-			System.out.println("\nContagem Nanosegundos: " + total);
+			System.out.println("\nContagem em Nanosegundos: " + (finish - start));
 
-			System.out.println("Contagem em Milisegundos: " + total2);
+			System.out.println("Contagem em Milissegundos: " + (finish2 - start2));
 
-			System.out.println("Contagem em Segundos: " + total / 1000000000);
+			System.out.println("Contagem em Segundos: " + (finish - start) / 1000000000);
 
-			System.out.println("\nDeseja escolher outro dicionário?\n1 - Sim\n2 - Não");
-			cod = extracted().nextInt();
-
+			do {
+				System.out.println("\nDeseja escolher outro dicionário?\n1 - Sim\n2 - Não");
+				cod = extracted().nextInt();
+				if(cod != 1 && cod != 2) {
+				System.out.println("Código inválido!");
+				}
+			} while (cod != 1 && cod != 2);
 		} while (cod == 1);
 
-		System.out.println("Obrigado por utilizar o programada ;D");
+		System.out.println("\nObrigado por utilizar o programada ;D");
 	}
 
 	private static Scanner extracted() {

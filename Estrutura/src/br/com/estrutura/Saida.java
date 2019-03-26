@@ -9,13 +9,12 @@ public class Saida {
 	public static void metodoPorScan(String[] arquivo) {
 
 		try {
-			String[] arq = arquivo;
 			PrintStream ps = new PrintStream("./Output/saída.txt");
 			String linha = "";
 			ps.print("Palavra           ----TAMANHO\n");
 
-			for (int i = 0; i < arq.length; i++) {
-				linha = arq[i] + "     ----" + arq[i].length() + "\n";
+			for (int i = 0; i < arquivo.length; i++) {
+				linha = arquivo[i] + "     ----" + arquivo[i].length() + "\n";
 				ps.print(linha);
 			}
 
