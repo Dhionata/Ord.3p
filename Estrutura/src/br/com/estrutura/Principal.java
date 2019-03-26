@@ -110,9 +110,9 @@ public class Principal {
 						cod = extracted().nextInt();
 
 						if (cod == 2) {
-							System.out.println("\nBusca Sequencial: " + BuscaSq.buscaSequencial(Escolheu, procura));
+							System.out.println("\nBusca Sequencial: " + Busca.buscaSequencial(Escolheu, procura));
 						} else if (cod == 1) {
-							System.out.println("\nOrdem Binaria: " + BuscaBi.buscaBinaria(procura, Escolheu));
+							System.out.println("\nOrdem Binaria: " + Busca.buscaBinaria(procura, Escolheu));
 						} else {
 							System.out.println("\nCódigo inválido! tente novamente.");
 						}
