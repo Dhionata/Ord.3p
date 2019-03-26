@@ -99,31 +99,30 @@ public class Ordenacao {
 
 	// MergeSort
 
-	public static void MergeSort(String[] dicionario, String[] aux, int inicio, int tamanho) {
+	public static void MergeSort(String[] dicionario, int inicio, int tamanho) {
+		int meio = (inicio + tamanho) / 2;
 		if (inicio < tamanho) {
-			int meio = (inicio + tamanho) / 2;
-			MergeSort(dicionario, aux, inicio, meio);
-			MergeSort(dicionario, aux, meio + 1, tamanho);
-			intercalar(dicionario, aux, inicio, meio, tamanho);
+			MergeSort(dicionario, inicio, meio);
+			MergeSort(dicionario, meio + 1, tamanho);
+			intercalar(dicionario, inicio, meio, tamanho);
 		}
 	}
 
-	private static void intercalar(String[] dicionario, String[] aux, int inicio, int meio, int tamanho) {
-		for (int k = inicio; k <= tamanho; k++) {
-			aux[k] = dicionario[k];
-		}
-		int i = inicio;
-		int j = meio + 1;
+	private static void intercalar(String[] dicionario, int inicio, int meio, int tamanho) {
+		int metadinha = meio + 1;
 
-		for (int k = inicio; k <= tamanho; k++) {
-			if (i > meio) {
-				dicionario[k] = aux[j++];
-			} else if (j > tamanho) {
-				dicionario[k] = aux[i++];
-			} else if (aux[i].length() < aux[j].length()) {
-				dicionario[k] = aux[i++];
+		while ((inicio <= meio) && (metadinha <= tamanho)) {
+			if (dicionario[inicio].length() < dicionario[metadinha].length()) {
+				inicio++;
 			} else {
-				dicionario[k] = aux[j++];
+				String aux = dicionario[metadinha];
+				for (int j = metadinha - 1; j >= inicio; j--) {
+					dicionario[j + 1] = dicionario[j];
+				}
+				dicionario[inicio] = aux;
+				inicio++;
+				meio++;
+				metadinha++;
 			}
 		}
 	}
