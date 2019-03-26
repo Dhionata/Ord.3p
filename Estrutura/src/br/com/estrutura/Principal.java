@@ -43,6 +43,7 @@ public class Principal {
 					System.out.println("\n1 - English");
 					System.out.println("\n2 - English (Canadian)");
 					System.out.println("\n3 - English (South African)");
+
 					x = extracted().nextInt();
 
 					if (x == 1) {
@@ -57,8 +58,8 @@ public class Principal {
 			do {
 
 				System.out.println("Escolha o método de ordenação: ");
-				System.out.println("1 - QuickSort\n2 - MergeSort\n3 " 
-						+ "- BubbleSort\n4 - InsertionSort\n5 - SelectionSort");
+				System.out.println(
+						"1 - QuickSort\n2 - MergeSort\n3 " + "- BubbleSort\n4 - InsertionSort\n5 - SelectionSort");
 
 				ordenacao = extracted().nextInt();
 
@@ -96,25 +97,36 @@ public class Principal {
 				System.out.println(pl);
 			}
 
-			System.out.println("\nInforme a palavra a ser procurada: ");
-			procura = extracted().nextLine();
+			System.out.println("Deseja procurar uma palavra?\n1 - Sim \n2 - Não");
+			cod = extracted().nextInt();
 
-			do {
-				System.out.println("\n1 - Binário\n2 - Sequêncial");
-				cod = extracted().nextInt();
+			while (cod == 1) {
+				do {
+					System.out.println("\nInforme a palavra a ser procurada: ");
+					procura = extracted().nextLine();
 
-				if (cod == 2) {
+					do {
+						System.out.println("\n1 - Binário\n2 - Sequêncial");
+						cod = extracted().nextInt();
 
-					System.out.println("\nBusca Sequencial: " + BuscaSq.buscaSequencial(Escolheu, procura));
-
-				} else if (cod == 1) {
-
-					System.out.println("\nOrdem Binaria: " + BuscaBi.buscaBinaria(procura, Escolheu));
-				} else {
-					System.out.println("\nCódigo inválido! tente novamente.");
-				}
-			} while (cod != 2 && cod != 1);
-
+						if (cod == 2) {
+							System.out.println("\nBusca Sequencial: " + BuscaSq.buscaSequencial(Escolheu, procura));
+						} else if (cod == 1) {
+							System.out.println("\nOrdem Binaria: " + BuscaBi.buscaBinaria(procura, Escolheu));
+						} else {
+							System.out.println("\nCódigo inválido! tente novamente.");
+						}
+					} while (cod != 2 && cod != 1);
+					do {
+						System.out.println("Deseja procurar outra palavra? \n1 - Sim\n2 - Não");
+						cod = extracted().nextInt();
+						if (cod < 1 || cod > 2) {
+							System.out.println("Código inválido!");
+						}
+					} while (cod < 1 || cod > 2);
+				} while (cod == 1);
+			};
+			
 			do {
 				System.out.println("\nDeseja salvar no arquivo saida.txt\n1 - Sim\n2 - Não");
 				cod = extracted().nextInt();
@@ -131,8 +143,8 @@ public class Principal {
 			System.out.println("\nContagem Nanosegundos: " + total);
 
 			System.out.println("Contagem em Milisegundos: " + total2);
-			
-			System.out.println("Contagem em Segundos: " + total2/1000);
+
+			System.out.println("Contagem em Segundos: " + total2 / 1000);
 
 			System.out.println("\nDeseja escolher outro dicionário?\n1 - Sim\n2 - Não");
 			cod = extracted().nextInt();
