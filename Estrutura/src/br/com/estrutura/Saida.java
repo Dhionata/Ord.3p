@@ -6,12 +6,13 @@ import java.io.PrintStream;
 
 public class Saida {
 
+	private static PrintStream ps;
+
 	public static void metodoPorScan(String[] arquivo) {
 
 		try {
-			PrintStream ps = new PrintStream("./Output/saída.txt");
+			ps = new PrintStream("./Output/saida.txt");
 			String linha = "";
-			ps.print("Palavra           ----TAMANHO\n");
 
 			for (int i = 0; i < arquivo.length; i++) {
 				linha = arquivo[i] + "     ----" + arquivo[i].length() + "\n";

@@ -28,39 +28,24 @@ public class Principal {
 			System.out.println("\n2 - English (Canadian)");
 			System.out.println("\n3 - English (South African)");
 
-			x = extracted().nextInt();
-
-			if (x == 1) {
-				Escolheu = English;
-			} else if (x == 2) {
-				Escolheu = English_Canadian;
-			} else if (x == 3) {
-				Escolheu = English_South_African;
-			}
-
-			if (x < 1 || x > 3) {
-				do {
-					System.out.println("Código errado, escolha entre esses idiomas.");
-					System.out.println("\n1 - English");
-					System.out.println("\n2 - English (Canadian)");
-					System.out.println("\n3 - English (South African)");
-
-					x = extracted().nextInt();
-
-					if (x == 1) {
-						Escolheu = English;
-					} else if (x == 2) {
-						Escolheu = English_Canadian;
-					} else if (x == 3) {
-						Escolheu = English_South_African;
-					}
-				} while (x < 1 || x > 3);
-			}
 			do {
+				x = extracted().nextInt();
 
+				if (x == 1) {
+					Escolheu = English;
+				} else if (x == 2) {
+					Escolheu = English_Canadian;
+				} else if (x == 3) {
+					Escolheu = English_South_African;
+				} else {
+					System.out.println("Código errado, escolha entre esses idiomas.");
+				}
+			} while (x < 1 || x > 3);
+
+			do {
 				System.out.println("Escolha o método de ordenação: ");
-				System.out.println(
-						"1 - QuickSort\n2 - MergeSort\n3 " + "- BubbleSort\n4 - InsertionSort\n5 - SelectionSort");
+				System.out
+						.println("1 - QuickSort\n2 - MergeSort\n3 - BubbleSort\n4 - InsertionSort\n5 - SelectionSort");
 
 				ordenacao = extracted().nextInt();
 
@@ -129,7 +114,6 @@ public class Principal {
 					} while (cod < 1 || cod > 2);
 				} while (cod == 1);
 			}
-			;
 
 			do {
 				System.out.println("\nDeseja salvar no arquivo saida.txt\n1 - Sim\n2 - Não");
@@ -153,8 +137,8 @@ public class Principal {
 			do {
 				System.out.println("\nDeseja escolher outro dicionário?\n1 - Sim\n2 - Não");
 				cod = extracted().nextInt();
-				if(cod != 1 && cod != 2) {
-				System.out.println("Código inválido!");
+				if (cod != 1 && cod != 2) {
+					System.out.println("Código inválido!");
 				}
 			} while (cod != 1 && cod != 2);
 		} while (cod == 1);

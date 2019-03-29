@@ -8,11 +8,10 @@ public class ArquivoHandler {
 
 	public static String[] VetorCriar(String cam) {
 
-		String caminho = cam;
 		String[] vetorTxt = null;
 		try {
 
-			FileReader arquivo = new FileReader(caminho);
+			FileReader arquivo = new FileReader(cam);
 
 			BufferedReader leitorLinhas = new BufferedReader(arquivo);
 

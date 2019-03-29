@@ -22,15 +22,21 @@ public class Ordenacao {
 	// BubbleSort
 
 	public static void BubbleSort(String[] dicionario) {
+		String aux;
+		boolean controle;
 
 		for (int i = 0; i < dicionario.length; i++) {
+			controle = true;
 			for (int j = 0; j < (dicionario.length - 1); j++) {
-				if (dicionario[j].length() < dicionario[j + 1].length()) {
-					String aux;
+				if (dicionario[j].length() > dicionario[j + 1].length()) {
 					aux = dicionario[j];
 					dicionario[j] = dicionario[j + 1];
 					dicionario[j + 1] = aux;
+					controle = false;
 				}
+			}
+			if (controle == true) {
+				break;
 			}
 		}
 	}
