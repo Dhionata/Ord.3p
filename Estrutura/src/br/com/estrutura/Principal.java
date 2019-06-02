@@ -12,13 +12,13 @@ public class Principal {
 		int cod;
 		double finish, finish2, start, start2;
 
+		String[] English = ArquivoHandler.VetorCriar("./Linguagens/English.txt");
+
+		String[] English_Canadian = ArquivoHandler.VetorCriar("./Linguagens/English (Canadian).txt");
+
+		String[] English_South_African = ArquivoHandler.VetorCriar("./Linguagens/English (South African).txt");
+
 		do {
-
-			String[] English = ArquivoHandler.VetorCriar("./Linguagens/English.txt");
-
-			String[] English_Canadian = ArquivoHandler.VetorCriar("./Linguagens/English (Canadian).txt");
-
-			String[] English_South_African = ArquivoHandler.VetorCriar("./Linguagens/English (South African).txt");
 
 			String[] Escolheu = {};
 
@@ -44,8 +44,8 @@ public class Principal {
 
 			do {
 				System.out.println("Escolha o método de ordenação: ");
-				System.out
-						.println("1 - QuickSort\n2 - MergeSort\n3 - BubbleSort\n4 - InsertionSort\n5 - SelectionSort");
+				System.out.println(
+						"1 - QuickSort\n2 - MergeSort\n3 - BubbleSort\n4 - InsertionSort\n5 - SelectionSort\n6 - RadixSort");
 
 				ordenacao = extracted().nextInt();
 
@@ -67,7 +67,11 @@ public class Principal {
 				} else if (ordenacao == 5) {
 					System.out.println("Espere até a conclusão da ordenação!");
 					Ordenacao.SelectionSort(Escolheu);
-				} else {
+				} 
+				/**else if (ordenacao == 6) {
+					System.out.println("Espere até a conclusão da ordenação!");
+					Ordenacao.RadixSort(Escolheu, 'a', 'z');*/
+				else {
 					System.out.println("\ncódigo inválido, tente novamente.");
 				}
 

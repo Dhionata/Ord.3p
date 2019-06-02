@@ -1,5 +1,10 @@
 package br.com.estrutura;
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.List;
+
 public class Ordenacao {
 
 	// SelectionSort
@@ -132,4 +137,54 @@ public class Ordenacao {
 			}
 		}
 	}
+	// RadixSort
+
+	/**
+	 * public static void RadixSort(String[] arr, char lower, char upper) { int
+	 * maxIndex = 0; for (int i = 0; i < arr.length; i++) { if (arr[i].length() - 1
+	 * > maxIndex) { maxIndex = arr[i].length() - 1; } }
+	 * 
+	 * for (int i = maxIndex; i >= 0; i--) { countingSort(arr, i, lower, upper); } }
+	 * 
+	 * private static void countingSort(String[] arr, int index, char lower, char
+	 * upper) { int[] countArray = new int[(upper - lower) + 2]; String[] tempArray
+	 * = new String[arr.length]; Arrays.fill(countArray, 0);
+	 * 
+	 * // increase count for char at index for (int i = 0; i < arr.length; i++) {
+	 * int charIndex = (arr[i].length() - 1 < index) ? 0 : ((arr[i].charAt(index) -
+	 * lower) + 1); countArray[charIndex]++; }
+	 * 
+	 * // sum up countArray;countArray will hold last index for the char at each //
+	 * strings index for (int i = 1; i < countArray.length; i++) { countArray[i] +=
+	 * countArray[i - 1]; }
+	 * 
+	 * for (int i = arr.length - 1; i >= 0; i--) { int charIndex = (arr[i].length()
+	 * - 1 < index) ? 0 : (arr[i].charAt(index) - lower) + 1;
+	 * tempArray[countArray[charIndex] - 1] = arr[i]; countArray[charIndex]--; }
+	 * 
+	 * for (int i = 0; i < tempArray.length; i++) { arr[i] = tempArray[i]; }
+	 */
+	/**
+	 * public static void stringRadixSort(String[] dicionario) {
+	 * 
+	 * @SuppressWarnings("unchecked") List<String>[] buckets = (List<String>[])
+	 * Array.newInstance(List.class, 27);
+	 * 
+	 * // Find longest word in list int maxWordLength = 0; for (String word : list)
+	 * { if (word.length() > maxWordLength) { maxWordLength = word.length(); } }
+	 * 
+	 * // Sorts list based on least significant letter (last letter of word) to most
+	 * // significant int letterNumber = maxWordLength; for (int i = 0; i <
+	 * maxWordLength; i++) { while (!list.isEmpty()) { String word =
+	 * list.remove(list.first()); int index = 0; if (word.length() >= letterNumber)
+	 * { char ch = word.charAt(letterNumber - 1); index = ch - 'a' + 1; // gets
+	 * index of each letter ('a' = buckets[1], 'z' = buckets[26], buckets[0] // is
+	 * for words shorter than 'letterNumber') } if (buckets[index] == null) {
+	 * buckets[index] = new LinkedList<String>(); } buckets[index].insertLast(word);
+	 * }
+	 * 
+	 * for (int j = 0; j < buckets.length; j++) { if (buckets[j] != null) { while
+	 * (!buckets[j].isEmpty()) {
+	 * list.insertLast(buckets[j].remove(buckets[j].first())); } } } letterNumber--;
+	 */
 }
