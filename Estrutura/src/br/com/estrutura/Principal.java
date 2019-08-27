@@ -22,7 +22,7 @@ public class Principal {
 
 			String[] Escolheu = {};
 
-			System.out.println("-- Código feito por Dhionatã Carlos Vieira e Murillo Maciel --");
+			System.out.println("-- Cï¿½digo feito por Dhionatï¿½ Carlos Vieira e Murillo Maciel --");
 			System.out.println("\nEscolha o dicionario a ser utilizado: ");
 			System.out.println("\n1 - English");
 			System.out.println("\n2 - English (Canadian)");
@@ -38,12 +38,12 @@ public class Principal {
 				} else if (x == 3) {
 					Escolheu = English_South_African;
 				} else {
-					System.out.println("Código errado, escolha entre esses idiomas.");
+					System.out.println("Cï¿½digo errado, escolha entre esses idiomas.");
 				}
 			} while (x < 1 || x > 3);
 
 			do {
-				System.out.println("Escolha o método de ordenação: ");
+				System.out.println("Escolha o mï¿½todo de ordenaï¿½ï¿½o: ");
 				System.out.println(
 						"1 - QuickSort\n2 - MergeSort\n3 - BubbleSort\n4 - InsertionSort\n5 - SelectionSort\n6 - RadixSort");
 
@@ -53,26 +53,27 @@ public class Principal {
 				start2 = System.currentTimeMillis(); // contador mili inicio
 
 				if (ordenacao == 1) {
-					System.out.println("Espere até a conclusão da ordenação!");
+					System.out.println("Espere atï¿½ a conclusï¿½o da ordenaï¿½ï¿½o!");
 					Ordenacao.QuickSort(Escolheu, 0, Escolheu.length - 1);
 				} else if (ordenacao == 2) {
-					System.out.println("Espere até a conclusão da ordenação!");
+					System.out.println("Espere atï¿½ a conclusï¿½o da ordenaï¿½ï¿½o!");
 					Ordenacao.MergeSort(Escolheu, 0, Escolheu.length - 1);
 				} else if (ordenacao == 3) {
-					System.out.println("Espere até a conclusão da ordenação!");
+					System.out.println("Espere atï¿½ a conclusï¿½o da ordenaï¿½ï¿½o!");
 					Ordenacao.BubbleSort(Escolheu);
 				} else if (ordenacao == 4) {
-					System.out.println("Espere até a conclusão da ordenação!");
+					System.out.println("Espere atï¿½ a conclusï¿½o da ordenaï¿½ï¿½o!");
 					Ordenacao.InsertionSort(Escolheu);
 				} else if (ordenacao == 5) {
-					System.out.println("Espere até a conclusão da ordenação!");
+					System.out.println("Espere atï¿½ a conclusï¿½o da ordenaï¿½ï¿½o!");
 					Ordenacao.SelectionSort(Escolheu);
-				} 
-				/**else if (ordenacao == 6) {
-					System.out.println("Espere até a conclusão da ordenação!");
-					Ordenacao.RadixSort(Escolheu, 'a', 'z');*/
+				}
+				/**
+				 * else if (ordenacao == 6) { System.out.println("Espere atï¿½ a conclusï¿½o da
+				 * ordenaï¿½ï¿½o!"); Ordenacao.RadixSort(Escolheu, 'a', 'z');
+				 */
 				else {
-					System.out.println("\ncódigo inválido, tente novamente.");
+					System.out.println("\ncï¿½digo invï¿½lido, tente novamente.");
 				}
 
 				finish = System.nanoTime(); // contador nano fim
@@ -85,10 +86,10 @@ public class Principal {
 			}
 
 			do {
-				System.out.println("\nDeseja procurar uma palavra?\n1 - Sim \n2 - Não");
+				System.out.println("\nDeseja procurar uma palavra?\n1 - Sim \n2 - Nï¿½o");
 				cod = extracted().nextInt();
 				if (cod < 1 || cod > 2) {
-					System.out.println("Código inválido!");
+					System.out.println("Cï¿½digo invï¿½lido!");
 				}
 			} while (cod < 1 || cod > 2);
 
@@ -98,7 +99,7 @@ public class Principal {
 					procura = extracted().nextLine();
 
 					do {
-						System.out.println("\n1 - Binário\n2 - Sequêncial");
+						System.out.println("\n1 - Binï¿½rio\n2 - Sequï¿½ncial");
 						cod = extracted().nextInt();
 
 						if (cod == 2) {
@@ -106,21 +107,21 @@ public class Principal {
 						} else if (cod == 1) {
 							System.out.println("\nOrdem Binaria: " + Busca.buscaBinaria(procura, Escolheu));
 						} else {
-							System.out.println("\nCódigo inválido! tente novamente.");
+							System.out.println("\nCï¿½digo invï¿½lido! tente novamente.");
 						}
 					} while (cod != 2 && cod != 1);
 					do {
-						System.out.println("\nDeseja procurar outra palavra? \n1 - Sim\n2 - Não");
+						System.out.println("\nDeseja procurar outra palavra? \n1 - Sim\n2 - Nï¿½o");
 						cod = extracted().nextInt();
 						if (cod < 1 || cod > 2) {
-							System.out.println("\nCódigo inválido!");
+							System.out.println("\nCï¿½digo invï¿½lido!");
 						}
 					} while (cod < 1 || cod > 2);
 				} while (cod == 1);
 			}
 
 			do {
-				System.out.println("\nDeseja salvar no arquivo saida.txt\n1 - Sim\n2 - Não");
+				System.out.println("\nDeseja salvar no arquivo saida.txt\n1 - Sim\n2 - Nï¿½o");
 				cod = extracted().nextInt();
 
 				if (cod == 1) {
@@ -128,7 +129,7 @@ public class Principal {
 				} else if (cod == 2) {
 					System.out.println("ok! kk");
 				} else {
-					System.out.println("Código inválido !");
+					System.out.println("Cï¿½digo invï¿½lido !");
 				}
 			} while (cod != 1 && cod != 2);
 
@@ -139,10 +140,10 @@ public class Principal {
 			System.out.println("Contagem em Segundos: " + (finish - start) / 1000000000);
 
 			do {
-				System.out.println("\nDeseja escolher outro dicionário?\n1 - Sim\n2 - Não");
+				System.out.println("\nDeseja escolher outro dicionï¿½rio?\n1 - Sim\n2 - Nï¿½o");
 				cod = extracted().nextInt();
 				if (cod != 1 && cod != 2) {
-					System.out.println("Código inválido!");
+					System.out.println("Cï¿½digo invï¿½lido!");
 				}
 			} while (cod != 1 && cod != 2);
 		} while (cod == 1);
