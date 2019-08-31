@@ -68,11 +68,11 @@ public class Principal {
 					System.out.println("Espere at� a conclus�o da ordena��o!");
 					Ordenacao.SelectionSort(Escolheu);
 				}
-				/**
-				 * else if (ordenacao == 6) { System.out.println("Espere at� a conclus�o da
-				 * ordena��o!"); Ordenacao.RadixSort(Escolheu, 'a', 'z');
-				 */
-				else {
+
+				else if (ordenacao == 6) {
+					System.out.println("Espere at� a conclus�o daordena��o!");
+					Ordenacao.radixSort(Escolheu, 'a', 'z');
+				} else {
 					System.out.println("\nc�digo inv�lido, tente novamente.");
 				}
 
