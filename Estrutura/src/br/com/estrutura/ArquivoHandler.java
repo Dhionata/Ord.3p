@@ -6,37 +6,37 @@ import java.io.IOException;
 
 public class ArquivoHandler {
 
-	public static String[] VetorCriar(String cam) {
+    public static String[] VetorCriar(String cam) {
 
-		String[] vetorTxt = null;
-		try {
+	String[] vetorTxt = null;
+	try {
 
-			FileReader arquivo = new FileReader(cam);
+	    FileReader arquivo = new FileReader(cam);
 
-			BufferedReader leitorLinhas = new BufferedReader(arquivo);
+	    BufferedReader leitorLinhas = new BufferedReader(arquivo);
 
-			String linha = "";
+	    String linha = "";
 
-			linha = leitorLinhas.readLine();
+	    linha = leitorLinhas.readLine();
 
-			int tamanhoVetor = Integer.parseInt(linha);
+	    int tamanhoVetor = Integer.parseInt(linha);
 
-			vetorTxt = new String[tamanhoVetor + 1];
-			int i = 0;
+	    vetorTxt = new String[tamanhoVetor + 1];
+	    int i = 0;
 
-			while (linha != null) {
+	    while (linha != null) {
 
-				vetorTxt[i] = linha;
+		vetorTxt[i] = linha;
 
-				linha = leitorLinhas.readLine();
+		linha = leitorLinhas.readLine();
 
-				i++;
-			}
-			arquivo.close();
+		i++;
+	    }
+	    arquivo.close();
 
-		} catch (IOException erro) {
-			System.out.println("Erro ao ler arquivo: " + erro.getMessage());
-		}
-		return vetorTxt;
+	} catch (IOException erro) {
+	    System.out.println("Erro ao ler arquivo: " + erro.getMessage());
 	}
+	return vetorTxt;
+    }
 }
