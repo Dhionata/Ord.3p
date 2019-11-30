@@ -4,6 +4,12 @@
             "type": "java",
             "name": "CodeLens (Launch) - Principal",
             "request": "launch",
+            "mainClass": "br.com.estrutura.Principal"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Principal",
+            "request": "launch",
             "mainClass": "br.com.estrutura.Principal",
             "projectName": "GitHub_810c39dd"
         },
