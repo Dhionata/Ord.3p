@@ -3,7 +3,6 @@ package br.com.estrutura;
 import java.util.Arrays;
 
 public class Ordenacao {
-
     // SelectionSort
 
     public static void SelectionSort(String[] dicionario) {

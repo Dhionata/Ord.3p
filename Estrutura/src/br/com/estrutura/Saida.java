@@ -4,7 +4,6 @@ import java.io.FileNotFoundException;
 import java.io.PrintStream;
 
 public class Saida {
-
     private static PrintStream ps;
 
     public static void metodoPorScan(String[] arquivo) {
@@ -17,9 +16,7 @@ public class Saida {
 		linha = arquivo[i] + "     ----" + arquivo[i].length() + "\n";
 		ps.print(linha);
 	    }
-
 	} catch (FileNotFoundException e) {
-
 	    e.printStackTrace();
 	}
     }
