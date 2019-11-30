@@ -11,7 +11,7 @@ public class Principal {
 
     public static void main(String[] args) {
 
-	System.out.println("-- Codigo feito por Dhionatã Carlos Vieira e Murillo Maciel --");
+	System.out.println("-- Codigo feito por Dhionata Carlos Vieira e Murillo Maciel --");
 	do {
 
 	    System.out.println("\nEscolha o dicionario a ser utilizado: ");
