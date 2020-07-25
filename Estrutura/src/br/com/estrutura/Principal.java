@@ -34,7 +34,7 @@ public class Principal {
 		} else {
 		    System.out.println("codigo errado, escolha entre esses idiomas.");
 		}
-	    } while (x < 1 || x > 4);
+	    } while ((x < 1) || (x > 4));
 
 	    do {
 		System.out.println("Escolha o metodo de ordenacao: ");
@@ -80,40 +80,30 @@ public class Principal {
 
 		tempo();
 
-	    } while (ordenacao > 5 || ordenacao < 1);
+	    } while ((ordenacao > 5) || (ordenacao < 1));
 
 	    do {
 		System.out.println("\nDeseja procurar uma palavra?\n1 - Sim \n2 - Não");
 		cod = extracted().nextInt();
-		if (cod < 1 || cod > 2) {
+		if ((cod < 1) || (cod > 2)) {
 		    System.out.println("codigo invalido!");
 		}
-	    } while (cod < 1 || cod > 2);
+	    } while ((cod < 1) || (cod > 2));
 
 	    while (cod == 1) {
 		do {
 		    System.out.println("\nInforme a palavra a ser procurada: ");
 		    procura = extracted().nextLine();
 
-		    do {
-			System.out.println("\n1 - Binario\n2 - Sequencial");
-			cod = extracted().nextInt();
+		    System.out.println("\nBusca Sequencial: " + Busca.buscaSequencial(Escolheu, procura));
 
-			if (cod == 2) {
-			    System.out.println("\nBusca Sequencial: " + Busca.buscaSequencial(Escolheu, procura));
-			} else if (cod == 1) {
-			    System.out.println("\nOrdem Binaria: " + Busca.buscaBinaria(procura, Escolheu));
-			} else {
-			    System.out.println("\ncodigo invalido! tente novamente.");
-			}
-		    } while (cod != 2 && cod != 1);
 		    do {
 			System.out.println("\nDeseja procurar outra palavra? \n1 - Sim\n2 - Não");
 			cod = extracted().nextInt();
-			if (cod < 1 || cod > 2) {
+			if ((cod < 1) || (cod > 2)) {
 			    System.out.println("\ncodigo invalido!");
 			}
-		    } while (cod < 1 || cod > 2);
+		    } while ((cod < 1) || (cod > 2));
 		} while (cod == 1);
 	    }
 
@@ -123,10 +113,10 @@ public class Principal {
 	    do {
 		System.out.println("\nDeseja escolher outro dicionario?\n1 - Sim\n2 - Não");
 		cod = extracted().nextInt();
-		if (cod != 1 && cod != 2) {
+		if ((cod != 1) && (cod != 2)) {
 		    System.out.println("codigo invalido!");
 		}
-	    } while (cod != 1 && cod != 2);
+	    } while ((cod != 1) && (cod != 2));
 	} while (cod == 1);
 
 	System.out.println("\nObrigado por utilizar o programada ;D");
@@ -143,6 +133,6 @@ public class Principal {
 
 	System.out.println("Contagem em Milissegundos: " + (finish2 - start2));
 
-	System.out.println("Contagem em Segundos: " + (finish - start) / 1000000000);
+	System.out.println("Contagem em Segundos: " + ((finish - start) / 1000000000));
     }
 }

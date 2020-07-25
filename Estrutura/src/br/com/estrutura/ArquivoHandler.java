@@ -2,15 +2,14 @@ package br.com.estrutura;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
-import java.io.IOException;
 
 public class ArquivoHandler {
 
     public static String[] VetorCriar(String cam) {
 	String[] vetorTxt = null;
-	try {
-	    FileReader arquivo = new FileReader(cam);
-	    BufferedReader leitorLinhas = new BufferedReader(arquivo);
+	try (FileReader arquivo = new FileReader(cam);
+		BufferedReader leitorLinhas = new BufferedReader(arquivo)) {
+
 	    String linha = "";
 	    linha = leitorLinhas.readLine();
 	    int tamanhoVetor = Integer.parseInt(linha);
@@ -23,7 +22,7 @@ public class ArquivoHandler {
 		i++;
 	    }
 	    arquivo.close();
-	} catch (IOException erro) {
+	} catch (Exception erro) {
 	    System.out.println("Erro ao ler arquivo: " + erro.getMessage());
 	}
 	return vetorTxt;
