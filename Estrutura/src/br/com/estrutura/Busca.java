@@ -3,15 +3,15 @@ package br.com.estrutura;
 public class Busca {
     // Sequencial
 
-    public static String buscaSequencial(String vet[], String valor) {
+    public static String buscaSequencial(String[] vet, String valor) {
 
-	for (int i = 0; i <= (vet.length - 1); i++) {
-	    System.out.println("tentativa número: " + i + " Palavra nessa posição: " + vet[i]);
-	    if (vet[i].equalsIgnoreCase(valor) == true) {
-		return "A palavra " + valor + " foi encontrada! indice do vetor: " + i;
-	    }
-	}
-	return "Nao foi encontrada a palavra " + valor + " no vetor.";
+        for (int i = 0; i <= (vet.length - 1); i++) {
+            System.out.println("tentativa número: " + i + " Palavra nessa posição: " + vet[i]);
+            if (vet[i].equalsIgnoreCase(valor)) {
+                return "A palavra " + valor + " foi encontrada! indice do vetor: " + i;
+            }
+        }
+        return "Nao foi encontrada a palavra " + valor + " no vetor.";
     }
 
     // Binaria
